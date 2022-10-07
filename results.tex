@@ -1,25 +1,80 @@
 \section{Results}
 
-
-
-
 %
-\begin{figure}
+\begin{figure}[ht]
 \begin{center}
 \[
-\begin{array}{cc}
-\mbox{$E = 1.0 \times 10^{-3}$} &
-\mbox{$E = 1.0 \times 10^{-4}$} \\
-\includegraphics*[width=75mm]{Figures/ratio_rac_VS_aspect_Ek3.pdf} &
-\includegraphics*[width=75mm]{Figures/ratio_rac_VS_aspect_Ek4.pdf}
+\begin{array}{c}
+\includegraphics*[width=120mm]{Figures/tilt_plot_all_run_v2.pdf}
 \end{array}
 \]
 \end{center}
-{\color{red}
 \caption{
-{\color{black}
-Dynamo regime in $r_{i} / r_{o} = 0.15$, 0.25, and 0.35. Red circles, blue triangles, green squares, and black crosses represent strong dipolar, weak dipolar, non-dipolar, and failed dynamo cases, respectively.
-}}
+Time evolution of dipole tile angle throughout the present simulation. We performed the simulation to approximately 80 times of the magnetic diffusion times and 12 reversals after $t = 5.0 \tau_{eta}$.}
+\label{Fig:Change_flux_summary_6grp}
+\end{figure}
+%
+%
+\begin{figure}[ht]
+\begin{center}
+\[
+\begin{array}{c}
+\includegraphics*[width=120mm]{Figures/temp_pvr_vrms_matsui_run.png}
+\end{array}
+\]
+\end{center}
+\caption{
+Change of symmetry of temperature field with respect to the equator during a reversal. Evolution of the dipole tile is plotted in (a), evolution of symmetric and anti-symmetric components of temperature is shown in (b). Volume rendering images of temperature at $t = 13.0$, 13.5, and 14.0 times of the magnetic diffusion time are shown from right to left in (c).
 }
-\label{fig:fig_12}
+\label{Fig:Change_flux_summary_6grp}
+\end{figure}
+%
+
+\subsection{What force does drive the dipole reversal?}
+
+%
+\begin{figure}[ht]
+\begin{center}
+\[
+\begin{array}{c}
+\includegraphics*[width=120mm]{Figures/g10_tilt_st_rv.pdf} \\
+\includegraphics*[width=120mm]{Figures/g10_histgram_run1.pdf}
+\end{array}
+\]
+\end{center}
+\caption{
+Evolution of dipole tilt angle (top) and histgram of the square of axial dipole component of the Gauss coefficient $|g_{1}^{0}|^2$ (bottom). The stable dipole period is plotted by red dots in the top panel. The reversal period is shown by the green plots in the top panel and by the green shaded area in the bottom panel.
+}
+\label{Fig:REversal_period_def}
+\end{figure}
+%
+
+%
+\begin{figure}[ht]
+\begin{center}
+\[
+\begin{array}{c}
+\includegraphics*[width=120mm]{Figures/rev11_Energy_flux_evolution.png}
+\end{array}
+\]
+\end{center}
+\caption{
+Evolution of energy flows duaring a reversal. Evolution of the dipole tilt is plotted in (a), and evolution of the symmetric (red line) and anti-symmetric (black line) components of the kinetic energy are plotted in (b). Energy flows for the symmetric and anti-symmetric components of kinetic energy are plotted (c) and (e), respectively. Differnces of the energy flows from time average for symmetric and anti-symmetric components are plotted in (d) and (f), respectively. Positive energy flows indicates energy input. Based on total energy fluxes in (c) and (e), energy flows with positive are plotted by solid lines, and that with negative values are plotted by dashed lines.}
+\label{Fig:Change_flux_summary_6grp}
+\end{figure}
+%
+
+%
+\begin{figure}[ht]
+\begin{center}
+\[
+\begin{array}{c}
+\includegraphics*[width=120mm]{Figures/ene_flux_st_rv_diff_6runs.png}
+\end{array}
+\]
+\end{center}
+\caption{
+Evolution of dipole tilt in six period (a to f) and change of energy fluxes from time average during the six reversal period. "usb", "uab" indicates energy fluxes into symmetric and anti-symmetric components by Lorentz force $(Pm E)^{-1} \bvec{u}_{s} \cdot (\bvec{J} \times \bvec{B})$ and $(Pm E)^{-1} \bvec{u}_{a} \cdot (\bvec{J} \times \bvec{B})$, respectively. "usua" is the energy flux to anti-symmetric components by advection term $-\bvec{u}_{a} \cdot(\bvec{\omega} \times \bvec{u})$. "bfs" and "bfa" indicate buoyancy flux for the symmetric and anti-symmetric components $Ra E^{-1} \bvec{u}_{s} \cdot \bvec{r} T$ and $Ra E^{-1} \bvec{u}_{a} \cdot \bvec{r} T$, respetcively. "w\_a\textasciicircum 2" and "w\_s\textasciicircum 2" indicate viscous dissipation for anti-symmetric and symmetric components of velocity $\omega_{a}^2$ and $\omega_{s}^2$, respectively.
+}
+\label{Fig:Change_flux_summary_6grp}
 \end{figure}

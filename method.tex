@@ -72,9 +72,9 @@ A uniform temperature gradient at the CMB is imposed as $\beta_o = -d T_s / dr |
 Then, that at the inner core boundary (ICB) is determined from the balance between the heat flux into the spherical shell at $r = r_i$ and that out of the spherical shell at $r = r_o$.
 
 The initial condition for numerical simulations is set as follows; $\bvec{u} = {\bf 0}$ for the velocity field, a geocentric magnetic dipole moment whose tilt angle from the rotation axis is $\pi / 4$, and a component of degree 4 and order 4 of spherical harmonics for the temperature as adopted by a dynamo benchmark (Christensen et al. 2001).
-The dimensionless parameters are set as $Ra_f = 2000$, $E = 6 \times 10^{-4}$, $Pr = 1$, and $Pm = 5$ on the basis of results by Sreenivasan {\it et al.} \shortcite{Sreenivasan:2014}.
+The dimensionless parameters are set as $Ra_f = 2000$, $E = 6 \times 10^{-4}$, $Pr = 1$, and $Pm = 5$ on the basis of results by Sreenivasan {\it et al.} \cite{Sreenivasan:2014}.
 
-We use a numerical dynamo code, Calypso \cite{Matsui:2014}.
+We use a numerical dynamo code, Calypso Ver. 2.0 \cite{Matsui:2014}.
 %
 The source code and manual of Calypso can be found in the following URL;\\
 https://github.com/geodynamics/calypso\\
@@ -204,7 +204,7 @@ We then derive the energy equations for the equatorially symmetric and antisymme
 \displaystyle
 \hspace*{1em}
 \int \left\{
-      \frac{Ra_f}{E}T^a \bvec{u^a}\cdot \frac{\bvec{r}{r_o}}
+      \frac{Ra_f}{E}T^a \bvec{u^a}\cdot \frac{\bvec{r}}{r_{o}}
      \right.
 \nonumber \\
 \displaystyle

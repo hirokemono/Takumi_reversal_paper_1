@@ -1,5 +1,7 @@
-\documentclass{gji}
-\usepackage[utf8]{inputenc}
+\documentclass[review]{elsarticle}
+\usepackage{epstopdf}
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
 \usepackage{timet,xcolor,graphicx}
 
 \title{Takumi\_reversal\_paper}
@@ -9,11 +11,28 @@
 \input{mathdef}
 \begin{document}
 
+\title{Kinetic energy transfer during dipole reversal in numerical dynamo simulation}
+
+\author[Tohoku]{Takumi Kera}
+\ead{hrmatsui@ucdavis.edu}
+\author[ucd]{Hiroaki Matsui\corref{cor1}}
+\ead{hrmatsui@ucdavis.edu}
+\author[TITECH]{Masaki Matsushima}
+\ead{hrmatsui@ucdavis.edu}
+\author[Tohoku]{Yuto Katoh \corref{cor1}}
+\ead{hrmatsui@ucdavis.edu}
+
+\cortext[cor1]{Corresponding author}
+\address[Tohoku]{Department of Geophysics, Tohoku University, Sendai, Japan.}
+\address[ucd]{Department of the Earth and Planetary Sciences, University of California, Davis, CA, USA.}
+\address[TITECH]{Department of Earth and Planetary Sciences, Tokyo Institute of Technology, Tokyo, Japan.}
+
+
 \maketitle
 
 \input{introduction}
-
 \input{method}
+
 
 \input{results}
 
@@ -21,6 +40,6 @@
 
 \input{conclusions}
 
-\input{reference}
+%\input{reference}
 
 \end{document}
