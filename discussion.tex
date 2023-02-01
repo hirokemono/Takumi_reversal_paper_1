@@ -1,18 +1,48 @@
 \section{Discussion}
+\label{section:discussion}
 
-%
-\begin{figure}[ht]
-\begin{center}
-\[
-\begin{array}{ccc}
-\includegraphics*[width=42mm]{Figures/stable.pdf}
-\includegraphics*[width=42mm]{Figures/reversal.pdf}
-\includegraphics*[width=42mm]{Figures/except.pdf}
-\end{array}
-\]
-\end{center}
-\caption{
-Schematic diagram of energy flow for the symmetric and anti-symmetric components of kinetic energy. The energy flow in the stable dipole phase is shown in the left, the change of the energy flow in the reversal phase is shown in the middle. And, the change of the energy flow in the exceptional case is shown in the right.
-}
-\label{Fig:schematic_reversal}
-\end{figure}
+We started {\color{red} numerical} simulations again a few times from the 
+% same 
+{\color{red} identical}
+snapshot, and obtained different results from the same initial field, dimensionless numbers, and length of time step $\Delta t$ (see Fig.~\ref{fig:dipole_tilt_retries}). 
+However, the solutions are not exactly the same, and direction of dipole component has a different behavior after running a few magnetic diffusion time. 
+In the present simulations, Calypso chooses the fastest algorithms for the Legendre and Fourier transforms in the initialization process. 
+The difference of order of summation can change the data at the last digit. 
+As a result, the error accumulates with the time integration. However, the time average the results are almost identical, and the dipole reversal happens in the both original and retried cases. 
+We consider that the present results have a limitation of a numerical modeling, but that these results are still feasible.
+
+%The dimensionless numbers in the present study are based on that for Sreenivasan et al.\ (2014)\cite{Sreenivasan:2014}, but the Rayleigh number is ?? times smaller. 
+%The difference comes from the different thermal boundary at the inner boundary. 
+%We choose the fixed heat flux boundary condition for the inner boundary, while Sreenivasan et al.\ (2014) applied fixed temperature for the inner boundary. 
+The fixed temperature condition forces to set to be equatorially symmetric at the inner boundary, but the temperature can have equatorially antisymmetric component from the inner boundary. 
+Consequently, a larger Rayleigh number is required to drive the equatorially antisymmetric temperature and flow fields in Sreenivasan et al.\ (2014).
+
+Nishikawa and Kusano (2008) \cite{Nishikawa:2008} made  investigations similar to {\color{red} those made in} the present study.
+They investigated energy 
+% fluxes 
+{\color{red} transfers} 
+by magnetic induction by equalorially symmetric and antisymmetric flow and magnetic diffusivities for equatorially symmetric and antisymmetric components of the magnetic field. 
+They concluded that the magnetic induction by equatorially antisymmetric flow increases during the reversals. 
+There are many differences between models by Nishikawa and Kusano (2008), such as compressibility of the fluid, magnetic boundary condition, dimensionless numbers, and the equation which is focusing. Especially, Nishikawa and Kusano (2008) adopted a larger magnetic Prindtl number. 
+The difference of the magnetic Prandtl number can change the most important term for the reversal processes.
+
+Now, we will discuss the processes of the magnetic field generation during the reversals. 
+Wicht and Olson (2004) \cite{WIcht:2004} showed a schematic diagram of the evolution of the zonal mean of temperature and current density during the dipole reversal. 
+They suggested that strong upwelling flow inside or around the tangent cylinder induces the reversal magnetic field and that the meridional circulation adevects the reversed magnetic field. 
+The results in the present study consists with the Wicht and Olson's proposed model, but the present results suggested that the strong hot plume is generated either one hemisphere during reversals. 
+This hot plume is mainly generated inside the tangent cylinder, and strong zonal flow is generated along with the plume to satisfy thermal wind balance. 
+This hot plume and intense zonal flow sometimes go to the outside of the tangent cylinder. 
+This intense zonal flow can generate intense toroidal magnetic field only one hemisphere, and the upwelling flow can generate the poloidal magnetic field with opposite direction from the original dipolar field. 
+We expect that the poloidal field induced by the radial motion along with the plume is not axisymmetric when the plume goes to the outside of the tangent cylinder. 
+However, the generated field will expands to globally. 
+We focus on the global energy transfer in the present study. 
+Investigations of detailed reversal processes are required as the future studies.
+
+We conclude that the increasing the equatorially antisymmetric and axissymetric flow is the primary cause of the dipolar reversal in the present geodynamo model. 
+However, it is still not difficult to evaluate how much equatorially antisymmetric component is required to initiate reversal or excursion quantitatively. 
+We need more reversal to investigate statistically, and we also need more simulations with dipolar dominant field and its reversals in different parameters, especially lower Ekman and magnetic Prandtl numbers. 
+To perform numerical simulations with a much smaller Ekman number, much higher spatial resolution or some sub-grid scale (SGS) model is required. 
+Aubert (2018?) suggested that the hyperdiffusivity is feasible to model a turbulence process for the geodynamo modeling, because the role of turbulence is much smaller to the dynamics of the fluid in the core. 
+However, the present study suggests that the inertia term can play an important role to drive equatorially antisymmetric and axisymmetric flow during the dipole reversal. 
+We need more investigation to clarify which length scales of flow are important to generate the equatorially antisymmetric and axisymmetric flow energy and if more sophisticated model is required to represent the processes to control this flow component.
+

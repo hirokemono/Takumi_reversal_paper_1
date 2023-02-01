@@ -1,10 +1,12 @@
 \section{Method}
+\label{section:method}
 
 \subsection{Numerical method}
 
-We perform numerical simulations of a magnetohydrodynamic (MHD) dynamo to investigate enhancing mechanism of equatorially antisymmetric flows related to polarity reversals of the Earth's magnetic field.
+% We perform numerical simulations of a magnetohydrodynamic (MHD) dynamo to investigate enhancing mechanism of equatorially antisymmetric flows related to polarity reversals of the Earth's magnetic field.
+We perform numerical simulations of a magnetohydrodynamic (MHD) dynamo to investigate  mechanism related to polarity reversals of the Earth's magnetic field.
 The fluid outer core, in which dynamo action occurs, is represented by a spherical shell rapidly rotating with angular velocity ${\bf \Omega} = \Omega \bvec{e}_z$, where $\bvec{e}_z$ is the unit vector aligned to the rotation axis.
-The spherical shell, of which inner and outerradii are $r_o$ and $r_i$, respectively, is filled with an electrically conducting Boussinesq fluid. This leads to an equation of continuity for incompressible fluid given as
+The spherical shell, of which inner and outer radii are $r_o$ and $r_i$, respectively, is filled with an electrically conducting Boussinesq fluid. This leads to an equation of continuity for incompressible fluid given as
 %
 \begin{equation}
 \nabla \cdot \bvec{u} = 0,
@@ -28,14 +30,15 @@ E \left( \frac{\partial\bvec{u}}{\partial t} +
  \bvec{\omega} \times \bvec{u} \right) =
  - E \nabla \left( P + \frac{1}{2} \bvec{u}^2 \right)
  + E \nabla^2 \bvec{u}
-\nonumber \\
+% \nonumber 
+\\
 \displaystyle
 \hspace*{\fill}
  -2 \bvec{e}_z \times \bvec{u}
  + Ra_f \frac{\bvec{r}}{r_o} T
  + \frac{1}{Pm} \bvec{J} \times \bvec{B} ,
-\label{eq:momentum}
 \end{array}
+\label{eq:momentum}
 \end{equation}
 %
 \begin{equation}
@@ -53,7 +56,8 @@ E \left( \frac{\partial\bvec{u}}{\partial t} +
 \end{equation}
 %
 where $t$ is the time, $\bvec{\omega}$ is the vorticity, $P$ is the pressure, $\bvec{r}$ is the position vector, and $\bvec{J}$ is the electric current density.
-The length, time, pressure, temperature, and magnetic field are respectively scaled by $D$, $D^2/\nu$, $\nu^2 /D^2$, $\beta_o D$, and $(\rho \mu_0 \Omega \eta )^{1/2}$, where $D = r_o - r_i$, $\nu$ is the kinematic viscosity, $\beta_o$ is the temperature gradient at the core-mantle boundary (CMB), $r = r_o$, $\rho$ is the mean density of core fluid, $\mu_0$ is the magnetic permeability of vacuum, and $\eta$ is the magnetic diffusivity.
+The length, time, pressure, temperature, and magnetic field are respectively scaled by $D$, $D^2/\nu$, $\nu^2 /D^2$, $\beta_o D$, and $(\rho \mu_0 \Omega \eta )^{1/2}$, where $D = r_o - r_i$, $\nu$ is the kinematic viscosity, $\beta_o$ is the temperature gradient at the core-mantle boundary (CMB), 
+{\color{red} assumed to be a spherical surface with radius,} $r = r_o$, $\rho$ is the mean density of core fluid, $\mu_0$ is the magnetic permeability of vacuum, and $\eta$ is the magnetic diffusivity.
 The dimensionless numbers included in the governing equations are the Rayleigh number, $Ra_f$, the Ekman number, $E$, the Prandtl number, $Pr$, and the magnetic Prandtl number, $Pm$, which are defined as
 %
 \begin{equation}
@@ -72,22 +76,25 @@ A uniform temperature gradient at the CMB is imposed as $\beta_o = -d T_s / dr |
 Then, that at the inner core boundary (ICB) is determined from the balance between the heat flux into the spherical shell at $r = r_i$ and that out of the spherical shell at $r = r_o$.
 
 The initial condition for numerical simulations is set as follows; $\bvec{u} = {\bf 0}$ for the velocity field, a geocentric magnetic dipole moment whose tilt angle from the rotation axis is $\pi / 4$, and a component of degree 4 and order 4 of spherical harmonics for the temperature as adopted by a dynamo benchmark (Christensen et al. 2001).
-The dimensionless parameters are set as $Ra_f = 2000$, $E = 6 \times 10^{-4}$, $Pr = 1$, and $Pm = 5$ on the basis of results by Sreenivasan {\it et al.} \cite{Sreenivasan:2014}.
+The dimensionless parameters are set as $Ra_f = 2000$, $E = 6 \times 10^{-4}$, $Pr = 1$, and $Pm = 5$ on the basis of results by Sreenivasan {\it et al.} (2014) \cite{Sreenivasan:2014}.
 
-We use a numerical dynamo code, Calypso Ver. 2.0 \cite{Matsui:2014}.
+We use a numerical dynamo code, Calypso Ver.~2.0 \cite{Matsui:2014}.
 %
 The source code and manual of Calypso can be found in the following URL;\\
 https://github.com/geodynamics/calypso\\
 %
 Numerical simulations are carried out in the spherical coordinates, $(r, \theta, \phi)$.
-Solenoidal vector fields , $\bvec{u}$ and $\bvec{B}$, are decomposed into the toroidal and poloidal components.
+Solenoidal vector fields, $\bvec{u}$ and $\bvec{B}$, are decomposed into the toroidal and poloidal components.
 Their scalar functions are expanded into spherical harmonics in the horizontal directions.
 Second-order finite differences are used in the radial direction.
 For the time stepping, the Crank-Nicolson method is adopted for linear terms, such as the diffusion, buoyancy, and Coriolis terms, and the second order Adams-Bashforth method is used for the other terms.
 
 \subsection{Equatorial symmetry}
 
-Dimensionless kinetic energy and dimensionless magnetic energy are respectively defined as
+{\color{red}
+We investigate possible variations in equatorial symmetry of the velocity and magnetic fields in relation to polarity reversals of the axial dipole magnetic field.
+}
+Dimensionless kinetic energy density and dimensionless magnetic energy density are respectively defined as
 %
 \begin{equation}
 E_{\rm kin} = \frac{1}{2 V}
@@ -101,24 +108,29 @@ E_{\rm mag} = \frac{1}{2 V Pm E}
 \label{eq:Emag}
 \end{equation}
 %
-Temporal variations of kinetic and magnetic energies can be derived from (\ref{eq:momentum}) and (\ref{eq:induction}), respectively.
+{\color{red}
+where volume integrals are carried out over the spherical shell.
+}
+Temporal variations of kinetic and magnetic energy densities can be derived from (\ref{eq:momentum}) and (\ref{eq:induction}), respectively.
 Their energy equations are given as
 %
 \begin{equation}
 \begin{array}{l}
 \displaystyle
 \frac{\partial}{\partial t}
- \int \frac{|\bvec{u}|^2}{2} d V =
-\nonumber \\
+ \int_V \frac{|\bvec{u}|^2}{2} d V =
+% \nonumber
+\\
 \displaystyle
 \hfill
 \hspace*{2em}
-\int \left\{
+\int_V \left\{
       \frac{Ra_f}{E}T \bvec{u}\cdot \bvec{e}_r
     + \frac{1}{Pm E} \bvec{u} \cdot
                      (\bvec{J} \times \bvec{B})
       \right.
-\nonumber \\
+% \nonumber 
+\\
 \hfill
       \left.
     - \bvec{u} \cdot (\bvec{\omega}\times\bvec{u})
@@ -132,28 +144,30 @@ Their energy equations are given as
 \begin{array}{l}
 \displaystyle
 \frac{1}{Pm E}\frac{\partial}{\partial t}
- \int \frac{|\bvec{B}|^2}{2} d V =
-\nonumber \\
+ \int_V \frac{|\bvec{B}|^2}{2} d V =
+% \nonumber 
+\\
 \hspace*{4em}
 \displaystyle
-- \frac{1}{Pm E}\int \left\{
+- \frac{1}{Pm E}\int_V \left\{
       \bvec{u} \cdot ( \bvec{J} \times \bvec{B} )
     \right.
-\nonumber \\
+% \nonumber 
+\\
 \hspace{5em}
 \displaystyle
     \left.
     + \frac{1}{Pm} |\bvec{J}|^2
     + \nabla \cdot ( \bvec{E} \times \bvec{B} ) 
-      \right\} d V,
+      \right\} d V.
 \end{array}
 \label{eq:energy_B}
 \end{equation}
 %
-where volume integrals are carried out over the spherical shell.
-We investigate possible variations in equatorial symmetry of the velocity and magnetic fields in relation to polarity reversals of the axial dipole magnetic field.
-Any vector can be divided into equatorially symmetric and antisymmetic constituents.
-We represent the velocity and magnetic fields as
+% where volume integrals are carried out over the spherical shell.
+% We investigate possible variations in equatorial symmetry of the velocity and magnetic fields in relation to polarity reversals of the axial dipole magnetic field.
+Any vector can be divided into equatorially symmetric and antisymmetric constituents.
+We represent the velocity and magnetic field as, for example, 
 %
 \begin{equation}
 \bvec{u} = \bvec{u}^s + \bvec{u}^a, ~~~
@@ -162,142 +176,131 @@ We represent the velocity and magnetic fields as
 \end{equation}
 %
 where superscripts $s$ and $a$ denote equatorially symmetric and antisymmetric fields, respectively.
-We then derive the energy equations for the equatorially symmetric and antisymmetric velocity field,
+We then derive the energy equations for the equatorially symmetric and antisymmetric velocity field, {\color{red} respectively given as}
 %
-\begin{equation}
-\begin{array}{l}
+\begin{eqnarray}
 \displaystyle
 \frac{\partial}{\partial t}
- \int \frac{|\bvec{u^s}|^2}{2} d V =
-\nonumber \\
-\displaystyle
-\hspace*{1em}
-\int \left\{
-      \frac{Ra_f}{E}T^s \bvec{u^s}\cdot \frac{\bvec{r}}{r_{o}}
+ \int \frac{|\bvec{u}^s|^2}{2} d V 
+ &=& \int \left\{
+      \frac{Ra_f}{E}T^s \bvec{u}^s\cdot \frac{\bvec{r}}{r_{o}}
      \right.
 \nonumber \\
-\displaystyle
+& & \displaystyle
 \hspace*{2em}
      \left.
-    + \frac{1}{Pm E} \bvec{u^s} \cdot
-                (\bvec{J^s} \times \bvec{B^a}
-                +\bvec{J^a} \times \bvec{B^s})
+    + \frac{1}{Pm E} \bvec{u}^s \cdot
+                (\bvec{J}^s \times \bvec{B}^a
+                +\bvec{J}^a \times \bvec{B}^s)
       \right.
 \nonumber \\
-\displaystyle
+& &\displaystyle
 \hspace*{3em}
       \left.
     - \bvec{u}^s \cdot 
-       (\bvec{\omega^s} \times \bvec{u}^a)
+       (\bvec{\omega}^s \times \bvec{u}^a)
     - |\bvec{\omega}^a|^2 
       \right\} d V,
-\end{array}
 \label{eq:energy_us}
-\end{equation}
+\end{eqnarray}
 %
-\begin{equation}
-\begin{array}{l}
+\begin{eqnarray}
 \displaystyle
 \frac{\partial}{\partial t}
- \int \frac{|\bvec{u^a}|^2}{2} d V =
-\nonumber \\
-\displaystyle
+ \int \frac{|\bvec{u}^a|^2}{2} d V 
+ & = & \displaystyle
 \hspace*{1em}
 \int \left\{
-      \frac{Ra_f}{E}T^a \bvec{u^a}\cdot \frac{\bvec{r}}{r_{o}}
+      \frac{Ra_f}{E}T^a \bvec{u}^a\cdot \frac{\bvec{r}}{r_{o}}
      \right.
 \nonumber \\
-\displaystyle
+& & \displaystyle
 \hspace*{2em}
      \left.
-    + \frac{1}{Pm E} \bvec{u^a} \cdot
-                (\bvec{J^a} \times \bvec{B^a}
-                +\bvec{J^s} \times \bvec{B^s})
+    + \frac{1}{Pm E} \bvec{u}^a \cdot
+                (\bvec{J}^a \times \bvec{B}^a
+                +\bvec{J}^s \times \bvec{B}^s)
       \right.
 \nonumber \\
-\displaystyle
+& & \displaystyle
 \hspace*{3em}
       \left.
     + \bvec{u}^a \cdot 
-       (\bvec{\omega^s} \times \bvec{u}^s)
+       (\bvec{\omega}^s \times \bvec{u}^s)
     - |\bvec{\omega}^s|^2 
       \right\} d V.
-\end{array}
 \label{eq:energy_ua}
-\end{equation}
+\end{eqnarray}
 %
-In the same way, the energy equations for the equatorially symmetric and antisymmetric magnetic field are obtained as
+In the same way, the energy equations for the equatorially symmetric and antisymmetric magnetic field are respectively obtained as
 %
-\begin{equation}
-\begin{array}{l}
+\begin{eqnarray}
 \displaystyle
 \frac{1}{Pm E}\frac{\partial}{\partial t}
- \int \frac{|\bvec{B^s}|^2}{2} d V =
-\nonumber \\
-\hspace*{2em}
-\displaystyle
-- \frac{1}{Pm E}\int \left\{
-      \bvec{u^a} \cdot 
-          ( \bvec{J^a} \times \bvec{B^a} )
-    + \bvec{u^s} \cdot 
-          ( \bvec{J^a} \times \bvec{B^s} )
+ \int \frac{|\bvec{B}^s|^2}{2} d V
+ & = & - \frac{1}{Pm E}\int \left\{
+      \bvec{u}^a \cdot 
+          ( \bvec{J}^a \times \bvec{B}^a )
+    + \bvec{u}^s \cdot 
+          ( \bvec{J}^a \times \bvec{B}^s )
     \right.
 \nonumber \\
 \hspace{3em}
-\displaystyle
+&& \displaystyle
     \left.
-    + \frac{1}{Pm} |\bvec{J^a}|^2
-    + \nabla \cdot ( \bvec{E^a} \times \bvec{B^s} ) 
+    + \frac{1}{Pm} |\bvec{J}^a|^2
+    + \nabla \cdot ( \bvec{E}^a \times \bvec{B}^s ) 
       \right\} d V,
-\end{array}
+% \end{array}
 \label{eq:energy_Bs}
-\end{equation}
+\end{eqnarray}
 %
-\begin{equation}
-\begin{array}{l}
+and 
+%
+\begin{eqnarray}
 \displaystyle
 \frac{1}{Pm E}\frac{\partial}{\partial t}
- \int \frac{|\bvec{B^a}|^2}{2} d V =
-\nonumber \\
-\hspace*{2em}
-\displaystyle
+ \int \frac{|\bvec{B}^a|^2}{2} d V 
+& = & \displaystyle
 - \frac{1}{Pm E}\int \left\{
-      \bvec{u^a} \cdot 
-          ( \bvec{J^s} \times \bvec{B^s} )
-    + \bvec{u^s} \cdot 
-          ( \bvec{J^s} \times \bvec{B^s} )
+      \bvec{u}^a \cdot 
+          ( \bvec{J}^s \times \bvec{B}^s )
+    + \bvec{u}^s \cdot 
+          ( \bvec{J}^s \times \bvec{B}^s )
     \right.
 \nonumber \\
 \hspace{3em}
-\displaystyle
+ & & \displaystyle
     \left.
-    + \frac{1}{Pm} |\bvec{J^s}|^2
-    + \nabla \cdot ( \bvec{E^s} \times \bvec{B^a} ) 
+    + \frac{1}{Pm} |\bvec{J}^s|^2
+    + \nabla \cdot ( \bvec{E}^s \times \bvec{B}^a ) 
       \right\} d V.
-\end{array}
 \label{eq:energy_Ba}
-\end{equation}
+\end{eqnarray}
 %
 The right-hand-sides of (\ref{eq:energy_us}) and (\ref{eq:energy_ua}) show energy transfer due to respective forces.
 The first terms corresponding to the work by buoyancy mean that equatorially symmetric and antisymmetric temperature fields contribute to kinetic energy for the equatorially symmetric and antisymmetric velocity fields, respectively.
-The second terms, the work by the Lorentz force, show energy transfer between kinetic and magnetic energies, as they are also found in (\ref{eq:energy_Bs} and (\ref{eq:energy_Ba}); that is, $\bvec{u}^s \cdot (\bvec{J}^s \times \bvec{B}^a)$ corresponds to energy transfer between $\bvec{u}^s$ and $\bvec{B}^a$, $\bvec{u}^s \cdot (\bvec{J}^a \times \bvec{B}^s)$ to that between $\bvec{u}^s$ and $\bvec{B}^s$, $\bvec{u}^a \cdot (\bvec{J}^a \times \bvec{B}^a)$ to that between $\bvec{u}^a$ and $\bvec{B}^a$, and $\bvec{u}^a \cdot (\bvec{J}^s \times \bvec{B}^s)$ to that between $\bvec{u}^a$ and $\bvec{B}^s$.
+The second terms, the work by the Lorentz force, show energy transfer between kinetic and magnetic energies, as they are also found in (\ref{eq:energy_Bs}) and (\ref{eq:energy_Ba}); that is, $\bvec{u}^s \cdot (\bvec{J}^s \times \bvec{B}^a)$ corresponds to energy transfer between $\bvec{u}^s$ and $\bvec{B}^a$, $\bvec{u}^s \cdot (\bvec{J}^a \times \bvec{B}^s)$ to that between $\bvec{u}^s$ and $\bvec{B}^s$, $\bvec{u}^a \cdot (\bvec{J}^a \times \bvec{B}^a)$ to that between $\bvec{u}^a$ and $\bvec{B}^a$, and $\bvec{u}^a \cdot (\bvec{J}^s \times \bvec{B}^s)$ to that between $\bvec{u}^a$ and $\bvec{B}^s$.
 In other words, $-\bvec{u}^s \cdot (\bvec{J}^s \times \bvec{B}^a)$ contributes to temporal variations of $\bvec{B}^a$ caused by $\bvec{u}^s$, $-\bvec{u}^s \cdot (\bvec{J}^a \times \bvec{B}^s)$ to those of $\bvec{B}^s$ by $\bvec{u}^a$, $-\bvec{u}^a \cdot (\bvec{J}^a \times \bvec{B}^a)$ to those of $\bvec{B}^a$ by $\bvec{u}^a$, and $-\bvec{u}^a \cdot (\bvec{J}^s \times \bvec{B}^s)$ to those of $\bvec{B}^s$ by $\bvec{u}^a$, as found in (\ref{eq:energy_Bs}) and (\ref{eq:energy_Ba}).
 The third terms in the right-hand-sides of (\ref{eq:energy_us}) and (\ref{eq:energy_ua}) express energy transfer between $\bvec{u}^s$ and $\bvec{u}^a$ caused by the advection, which does not contribute to total kinetic energy.
-The fourth terms indicate the dissipation due to viscosity.
+The fourth terms indicate the {\color{red} viscous} dissipation. 
+% due to viscosity.
 The third terms in the right-hand-sides of (\ref{eq:energy_Bs}) and (\ref{eq:energy_Ba}) indicate the dissipation due to the magnetic diffusion.
 The forth terms correspond to the Poynting flux which can be expressed, for example, as
 %
 \begin{equation}
 -\int \nabla \cdot
   ( \bvec{E}^a \times \bvec{B}^s ) d V =
- \int ' \bvec{E}^a \times \bvec{B}^s )
+ \int ' (\bvec{E}^a \times \bvec{B}^s )
    \cdot \bvec{e}_r d S .
 \label{eq:Poynting}
 \end{equation}
 %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The dimensionless time, $t$, was scaled by the viscous diffusion time, $\tau_\nu = D^2 / \nu$, whereas the magnetic diffusion time, $\tau_\eta = D^2 / \eta = Pm D^2 / \nu = 5 \tau_\nu$ is used to show temporal variations obtained as results in the present study.
+The dimensionless time, $t$, is scaled by the viscous diffusion time, $\tau_\nu = D^2 / \nu$, whereas the magnetic diffusion time, $\tau_\eta = D^2 / \eta = Pm D^2 / \nu = 5 \tau_\nu$ is used to show temporal variations obtained 
+% as results 
+in the present study.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The tilt angle, $\theta_D$, between the rotation axis and the direction of the magnetic dipole moment is calculated from the radial component of the magnetic field with degree one in spherical harmonics at the CMB.
