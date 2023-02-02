@@ -6,7 +6,11 @@
 % We perform numerical simulations of a magnetohydrodynamic (MHD) dynamo to investigate enhancing mechanism of equatorially antisymmetric flows related to polarity reversals of the Earth's magnetic field.
 We perform numerical simulations of a magnetohydrodynamic (MHD) dynamo to investigate  mechanism related to polarity reversals of the Earth's magnetic field.
 The fluid outer core, in which dynamo action occurs, is represented by a spherical shell rapidly rotating with angular velocity ${\bf \Omega} = \Omega \bvec{e}_z$, where $\bvec{e}_z$ is the unit vector aligned to the rotation axis.
-The spherical shell, of which inner and outer radii are $r_o$ and $r_i$, respectively, is filled with an electrically conducting Boussinesq fluid. This leads to an equation of continuity for incompressible fluid given as
+The spherical shell, of which inner and outer radii are $r_o$ and $r_i$, respectively, is filled with an electrically conducting Boussinesq fluid. 
+{\color{green}
+The conductive fluid is asssumed to have constant kinetic viscosity $\nu$, thermal diffusivity $\kappa$, and magnetic diffusivity $\eta$.
+}
+This leads to an equation of continuity for incompressible fluid given as
 %
 \begin{equation}
 \nabla \cdot \bvec{u} = 0,
@@ -56,8 +60,12 @@ E \left( \frac{\partial\bvec{u}}{\partial t} +
 \end{equation}
 %
 where $t$ is the time, $\bvec{\omega}$ is the vorticity, $P$ is the pressure, $\bvec{r}$ is the position vector, and $\bvec{J}$ is the electric current density.
-The length, time, pressure, temperature, and magnetic field are respectively scaled by $D$, $D^2/\nu$, $\nu^2 /D^2$, $\beta_o D$, and $(\rho \mu_0 \Omega \eta )^{1/2}$, where $D = r_o - r_i$, $\nu$ is the kinematic viscosity, $\beta_o$ is the temperature gradient at the core-mantle boundary (CMB), 
-{\color{red} assumed to be a spherical surface with radius,} $r = r_o$, $\rho$ is the mean density of core fluid, $\mu_0$ is the magnetic permeability of vacuum, and $\eta$ is the magnetic diffusivity.
+The length, time, pressure, temperature, and magnetic field are respectively scaled by $D$, $D^2/\nu$, $\nu^2 /D^2$, $\beta_o D$, and $(\rho \mu_0 \Omega \eta )^{1/2}$, % where $D = r_o - r_i$, $\nu$ is the kinematic viscosity, $\beta_o$ is the temperature gradient at the core-mantle boundary (CMB), 
+{\color{green}
+where $D = r_o - r_i$, $\rho$, and $\mu_0$ are the thickness of the outer core, the mean density of the conductive fluid, and  the magnetic permeability of vacuum, respectively. $\beta_o$ are  the temperature gradient at the core-mantle boundary (CMB), which is
+}
+{\color{red} assumed to be a spherical surface with radius,} $r = r_o$.
+%$\rho$ is the mean density of core fluid, $\mu_0$ is the magnetic permeability of vacuum.
 The dimensionless numbers included in the governing equations are the Rayleigh number, $Ra_f$, the Ekman number, $E$, the Prandtl number, $Pr$, and the magnetic Prandtl number, $Pm$, which are defined as
 %
 \begin{equation}
