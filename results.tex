@@ -2,14 +2,26 @@
 \label{section:results}
 
 We performed a dynamo simulation with $E = 6.0 \times 10^{-4}$, $Ra_f = 2000$, $Pr = 1.0$, and $Pm = 5.0$. 
-The simulation is performed approximately 80 times %of 
-% the magnetic diffusion time 
-{\color{red}
-$\tau_{\eta} = L^{2}/ \eta$ (the magnetic diffusion time), 
+{\color{blue}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The dimensionless time, $t$, is scaled by the viscous diffusion time, $\tau_\nu = D^2 / \nu$, whereas the magnetic diffusion time, $\tau_\eta = D^2 / \eta = Pm D^2 / \nu = 5 \tau_\nu$ is used to show the results of the present study.
 }
+The simulation is performed approximately 80 times 
+% of the magnetic diffusion time, 
+$\tau_\nu$,
+%{\color{red}
+%$\tau_{\eta} = L^{2}/ \eta$ (the magnetic diffusion time), 
+%}
 and the average ratio of magnetic to kinetic energies are $E_{\rm mag} / E_{\rm kin}$ is approximately 0.63. 
+{\color{blue}
+To determine the direction of the dipole component of the generated magnetic field,  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+the dipole tilt angle, $\theta_D$, between the directions of rotation axis and the magnetic dipole moment is calculated from the radial component of the magnetic field with degree one in spherical harmonics at the CMB.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+}
+
 As seen the evolution of dipole tilt angle in Fig.~\ref{fig:sph_shell_275_full}, the present case has stable dipole period and periods with 13 dipole reversal and 6 excursion events. 
-In the present study, we choose 9 periods which are shown by arrows in Fig.~\ref{fig:sph_shell_275_full} including these reversals and investigate energy transfer among the equatorially symmetric and anti-symmetric components of the kinetic and magnetic energies. 
+In the present study, we choose 9 periods shown by double headed arrows in Fig.~\ref{fig:sph_shell_275_full} including these polarity reversals and investigate energy transfer among the equatorially symmetric and antisymmetric components of the kinetic and magnetic energies. 
 We also run 7 simulations  starting from snapshots in period 1, 2, and 3. 
 As seen in Fig.~\ref{fig:dipole_tilt_retries}, these results departs from the initial simulation result except for the case Retry 3-2, but these retried cases also have reversals and excursions. 
 We will discuss the reason why these retried cases go to different solutions in the discussion section.
@@ -17,21 +29,29 @@ We will discuss the reason why these retried cases go to different solutions in 
 \subsection{Characteristics of the field during polarity reversals}
 
 First, we investigate characteristics of the temperature field during a polarity reversal by choosing a result between $13.0 < t/\tau_{\eta} < 14.0$. 
-As shown in the panel (b) of Fig.~\ref{fig:temperature_rendering}, equatorially antisymmetric component of the temperature is larger than the equatorially symmetric component of the temperature during the reversals and excursion, while the equatorially symmetric component of the temperature is approximately 1.5 times larger than the equatorially antisymmetric component. 
-Looking at the three dimensional structure of the temperature, hot material rises strongly in the southern hemisphere during the reversal, while hot region inside the tangent cylinder can be observed in the both hemisphere (See Fig.~\ref{fig:temperature_rendering} and movie in the supplement materials). 
-However, looking at the radial magnetic fields at the outer boundary of the spherical shell, any corresponding feature to the temperature field is not observed.
+As shown in 
+% the panel (b) of Fig.~\ref{fig:temperature_rendering}, 
+{\color{red}
+Fig.~\ref{fig:temperature_rendering}b,
+}
+equatorially antisymmetric component of the temperature is larger than the equatorially symmetric component of the temperature during the reversals and excursion, while the equatorially symmetric component of the temperature is approximately 1.5 times larger than the equatorially antisymmetric component. 
+Looking at the three dimensional structure of the temperature, hot material rises strongly in the southern hemisphere during the polarity reversal, while hot region inside the tangent cylinder can be observed in the both hemisphere (See Fig.~\ref{fig:temperature_rendering} and movie in the supplement materials). 
+% However, looking at the radial magnetic fields at the outer boundary of the spherical shell, any corresponding feature to the temperature field is not observed.
+{\color{red}
+However, any feature corresponding to the temperature does not appear in the radial magnetic field at the outer boundary of the spherical shell.
+}
 
 In the following investigation, we will take time averages of the fields during the stable dipole and reversing periods. 
-We choose the amplitude of the axial dipole component of the Gauss coefficients $g_{1}^{0}$ at $r = 2.8$ obtained bt the poloidal magnetic field at the outer boundary of the shell $r = r_{o}$. 
+We choose the amplitude of the axial dipole component of the Gauss coefficients $g_{1}^{0}$ at $r = 2.8$ obtained by the poloidal magnetic field at the outer boundary of the shell $r = r_{o}$. 
 As shown in Fig.~\ref{Fig:Reversal_period_def}, we define the reversing periods when $\left( g_{1}^{0} \right)^2 < 4.9 \times 10^{-5}$ in the present study. 
 
 As shown in Fig.~\ref{fig:temperature_rendering}, large warm region is only observed in the southern hemisphere. 
 We compare zonally power spectra of the equatorially symmetric and antisymmetric components of the kinetic energy and temperature in the stable and reversal periods using the Retry 1-1 case. 
-The changes between stable and reversal periods are quite different between the axisymmetric ($m = 0$) components and non-axisymmetric components ($m \ne 0$). 
-In the non-axisymmetric components, equitorially symmetric component of kinetic energy and temperature is always larger than the equatorially antisymmetric component, and there is no significant changes between the stable and reversing dipole period. 
+The changes between stable and reversal periods are quite different between the axisymmetric ($m = 0$) and non-axisymmetric components ($m \ne 0$). 
+In the non-axisymmetric components, equatorially symmetric component of kinetic energy and temperature is always larger than the equatorially antisymmetric component, and there is no significant change between the stable and reversing dipole period. 
 The toroidal kinetic energy at $m > 10$ in the reversing periods increases from the stable period, but the difference is not significant. 
 On the other hand, significant changes can be observed in the axisymmetric component of the temperature and toroidal kinetic energy. 
-In the toroidal kinetic energy, equatorially antisymmetric component in the reversing period is approximately twice of that in the stable dipole period, while there is almost no changes in the amplitude of the equatorially symmetric component of the axisymmetric kinetic energy.
+In the toroidal kinetic energy, equatorially antisymmetric component in the reversing period is approximately twice of that in the stable dipole period, while there is almost no change in the amplitude of the equatorially symmetric component of the axisymmetric kinetic energy.
 Consequently, the equatorially antisymmetric component of the toroidal kinetic energy is larger than the equatorially symmetric component of them. 
 The axisymmetric component of temperature in the reversing period increases approximately 3 times of that in the stable periods. 
 The equatorially antisymmetric component of the axisymmetric temperature becomes larger than the non-axisymmetric components of the temperature, while the non-axisymmetric components of the kinetic energy is larger than the equatorially antisymmetric components of the kinetic energy. 
@@ -51,7 +71,7 @@ during the dipole reversal with splitting the contribution of the equatorially s
 First, we investigate time evolution of the energy fluxes for one reversal in Retry 1-1 case. 
 The time evolutions of the energy fluxes for the equatorially symmetric and antisymmetric kinetic energies are plotted included the evolution of dipole tilt angle in Fig.~\ref{fig:energy_flux_evolution_retry1_1}. 
 As described in the previous subsection, the equatorially antisymmetric component of kinetic energy does not overcome the equatorially symmetric component of the kinetic energy. 
-In addition, there is no significant changes in the overall amplitude of energy 
+In addition, there is no significant change in the overall amplitude of energy 
 % fluxes 
 {\color{red} transfers}
 during the stable and reversing dipole periods. 
@@ -62,7 +82,7 @@ which shows that the both components of kinetic energy are transferred to the ma
 The energy 
 % flux 
 {\color{red} transfer}
-for the advection term is the smallest amplitude in these energy 
+for the advection term is the smallest in these energy 
 % fluxes, 
 {\color{red} transfers,}
 but the advection term always transfers energy from the equatorially symmetric component to antisymmetric component 
@@ -250,7 +270,7 @@ Spectra in stable and reversal periods are shown by red and blue colors, respect
 % Positive energy flows indicates energy input. 
 % Based on total energy fluxes in (c) and (e), energy flows with positive are plotted by solid lines, and that with negative values are plotted by dashed lines.
 Time evolution of (a) the dipole tilt angle, (b) kinetic energy of the equatorially symmetric (red line) and antisymmetric (black line) components, (c) and (d) energy flows and their deviations from their time means for the equatorially symmetric component, respectively, and (e) and (f) energy flows and their deviations from their time means for the equatorially antisymmetric component, respectively.
-In (c)--(f), the buoyancy flux, inertial, work of Lorentz frce, and viscous dissipation are plotted by red, green, blue, and black lines, respectively.
+In (c)--(f), the buoyancy flux, inertial, work of Lorentz force, and viscous dissipation are plotted by red, green, blue, and black lines, respectively.
 Positive energy flows (energy input) and negative ones (energy output) are plotted by solid and dashed lines, respectively.
 }
 }
