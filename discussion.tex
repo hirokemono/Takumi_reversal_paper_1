@@ -1,29 +1,38 @@
 \section{Discussion}
 \label{section:discussion}
 
-We started {\color{red} numerical} simulations again a few times from the 
-% same 
-{\color{red} identical}
-snapshot, and obtained different results from the same initial field, dimensionless numbers, and length of time step $\Delta t$ (see Fig.~\ref{fig:dipole_tilt_retries}). 
-However, the solutions are not exactly the same, and direction of dipole component has a different behavior after running a few magnetic diffusion time. 
-In the present simulations, Calypso chooses the fastest algorithms for the Legendre and Fourier transforms in the initialization process. 
-The difference of order of summation can change the data at the last digit. 
-As a result, the error accumulates with the time integration. However, the time average the results are almost identical, and the dipole reversal happens in the both original and retried cases. 
-We consider that the present results have a limitation of a numerical modeling, but that these results are still feasible.
+We restarted numerical simulations a few times from the identical snapshot using the same dimensionless numbers and the time step $\Delta t$.
+However, we obtained results different from the original one; the solutions are not exactly identical
+as found in the evolution of the dipole tilt angle after a few magnetic diffusion time (see Fig.~\ref{fig:dipole_tilt_retries}). 
+Calypso chooses the fastest algorithms for the Legendre and Fourier transforms at the initialization process in numerical simulations. 
+The different order of summation can change the last digit of data. 
+As a result, numerical errors accumulate with the time integration. 
+{\color{red}
+% However, the time average the results are almost identical, and the dipole reversal happens in the both original and retried cases.
+We found, however, that polarity reversals occur in the same way, and that the statistical results are similar to the original one.
+% We consider that the present results have a limitation of a numerical modeling, but that these results are still feasible.
+Hence, we consider that the present results are substantial and feasible.
+}
 
-%The dimensionless numbers in the present study are based on that for Sreenivasan et al.\ (2014)\cite{Sreenivasan:2014}, but the Rayleigh number is ?? times smaller. 
-%The difference comes from the different thermal boundary at the inner boundary. 
-%We choose the fixed heat flux boundary condition for the inner boundary, while Sreenivasan et al.\ (2014) applied fixed temperature for the inner boundary. 
-The fixed temperature condition forces to set to be equatorially symmetric at the inner boundary, but the temperature can have equatorially antisymmetric component from the inner boundary. 
-Consequently, a larger Rayleigh number is required to drive the equatorially antisymmetric temperature and flow fields in Sreenivasan et al.\ (2014) \cite{Sreenivasan:2014}.
+The dimensionless numbers adopted in the present study are based on those used by Sreenivasan et al.\ (2014) \cite{Sreenivasan:2014}. 
+As shown in Fig.~\ref{Fig:more_cases}, however, we obtained a non-dipolar magnetic field solution for $Ra_f = 2700$, although Sreenivasan et al.\ (2014) \cite{Sreenivasan:2014} obtained Earth-like dipole reversals with the same Rayleigh number (it is noted that Sreennivasan et al.\ (2014) defined the Rayleigh number as $Ra_f = \alpha g_o \beta_o D^2 / 2\Omega \nu$).
+The difference is likely to originate from the different thermal boundary condition at the inner boundary. 
+We fixed the heat flux at the inner boundary, while Sreenivasan et al.\ (2014) fixed the temperature at the inner boundary. 
+{\color{red}
+The uniformly fixed temperature boundary condition forces the temperature to be equatorially symmetric at the inner boundary, although the temperature can be equatorially antisymmetric away from the inner boundary.
+}
+Consequently, Sreenivasan et al.\ (2014) \cite{Sreenivasan:2014} required a larger Rayleigh number to give rise to the equatorially antisymmetric temperature and flow in turn. 
+% 以下，よくわかりませんでした．．．
+{\color{green}
+However, we expect that the effects of the homogeneous thermal boundary condition is not significant because no reversal is obtained for $Ra_f = 1500$ in the present study and for $Ra_f = 1620$ in Sreenivasan et al.\ (2014) (See left panel of Fig.~\ref{Fig:more_cases}).
+}
 
-Nishikawa and Kusano (2008) \cite{Nishikawa:2008} made  investigations similar to {\color{red} those made in} the present study.
-They investigated energy 
-% fluxes 
-{\color{red} transfers} 
-by magnetic induction by equalorially symmetric and antisymmetric flow and magnetic diffusivity for equatorially symmetric and antisymmetric components of the magnetic field. 
+\input{fig_timevo_Raf.tex}
+
+Nishikawa and Kusano (2008) \cite{Nishikawa:2008} made investigations similar to those made in the present study.
+They investigated energy transfers by magnetic induction by equatorially symmetric and antisymmetric flow and magnetic diffusivity for equatorially symmetric and antisymmetric components of the magnetic field. 
 They concluded that the magnetic induction by equatorially antisymmetric flow increases during the reversals. 
-There are many differences between models by Nishikawa and Kusano (2008), such as compressibility of the fluid, magnetic boundary condition, dimensionless numbers, and the equation which is focusing. Especially, Nishikawa and Kusano (2008) adopted a larger magnetic Prindtl number. 
+There are many differences between models by Nishikawa and Kusano (2008), such as compressibility of the fluid, magnetic boundary condition, dimensionless numbers, and the equation which is focusing. Especially, Nishikawa and Kusano (2008) adopted a larger magnetic Prandtl number. 
 The difference of the magnetic Prandtl number can change the most important term for the reversal processes.
 
 Now, we will discuss the processes of the magnetic field generation during the reversals. 
@@ -42,7 +51,25 @@ We conclude that the increasing the equatorially antisymmetric and axissymetric 
 However, it is still not difficult to evaluate how much equatorially antisymmetric component is required to initiate reversal or excursion quantitatively. 
 We need more reversal to investigate statistically, and we also need more simulations with dipolar dominant field and its reversals in different parameters, especially lower Ekman and magnetic Prandtl numbers. 
 To perform numerical simulations with a much smaller Ekman number, much higher spatial resolution or some sub-grid scale (SGS) model is required. 
-Aubert (2018?) suggested that the hyperdiffusivity is feasible to model a turbulence process for the geodynamo modeling, because the role of turbulence is much smaller to the dynamics of the fluid in the core. 
+Aubert {\color{red}(2019)} suggested that the hyperdiffusivity is feasible to model a turbulence process for the geodynamo modeling, because the role of turbulence is much smaller to the dynamics of the fluid in the core. 
 However, the present study suggests that the inertia term can play an important role to drive equatorially antisymmetric and axisymmetric flow during the dipole reversal. 
 We need more investigation to clarify which length scales of flow are important to generate the equatorially antisymmetric and axisymmetric flow energy and if more sophisticated model is required to represent the processes to control this flow component.
 
+% \begin{figure}[ht]
+% \begin{center}
+% \[
+% \begin{array}{cc}
+% Raf = 1500 & Raf = 2750 \\
+% %\includegraphics*[width=60mm]{Figures/stable.pdf} &
+% %\includegraphics*[width=60mm]{Figures/reversal.pdf} \\
+% \includegraphics*[width=60mm]{Figures/sph_shell_276_tilt.pdf} &
+% \includegraphics*[width=60mm]{Figures/sph_shell_272_tilt.pdf} \\
+% \end{array}
+% \]
+% \end{center}
+% \caption{
+% Time evolution of dipole tilt angle in the cases with $Raf = 1500$ (left panel) and $Raf = 2750$ (right panel).
+% }
+% \label{Fig:more_cases}
+% \end{figure}
+%

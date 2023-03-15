@@ -4,13 +4,15 @@
 \subsection{Numerical method}
 
 % We perform numerical simulations of a magnetohydrodynamic (MHD) dynamo to investigate enhancing mechanism of equatorially antisymmetric flows related to polarity reversals of the Earth's magnetic field.
-We perform numerical simulations of a magnetohydrodynamic (MHD) dynamo to investigate  mechanism related to polarity reversals of the Earth's magnetic field.
-The fluid outer core, in which dynamo action occurs, is represented by a spherical shell rapidly rotating with angular velocity ${\bf \Omega} = \Omega \bvec{e}_z$, where $\bvec{e}_z$ is the unit vector aligned to the rotation axis.
-The spherical shell, of which inner and outer radii are $r_o$ and $r_i$, respectively, is filled with an electrically conducting Boussinesq fluid. 
-{\color{blue}
-The conductive fluid is assumed to have constant kinetic viscosity $\nu$, thermal diffusivity $\kappa$, and magnetic diffusivity $\eta$.
+We perform numerical simulations of a magnetohydrodynamic (MHD) dynamo to investigate mechanism related to polarity reversals of the Earth's magnetic field.
+The fluid outer core, in which dynamo action occurs, is represented by a spherical shell rapidly rotating with angular velocity $\bvec{\Omega} = \Omega \hat{\bvec{z}}$, where $\hat{\bvec{z}}$ is the unit vector aligned to the rotation axis.
+% The spherical shell, of which inner and outer radii are $r_o$ and $r_i$, respectively, is filled with an electrically conducting Boussinesq fluid. 
+% The conductive fluid is assumed to have constant kinetic viscosity $\nu$, thermal diffusivity $\kappa$, and magnetic diffusivity $\eta$.
+{\color{red}
+The spherical shell with inner and outer radii, $r_i$ and $r_o$, respectively, and $r_i / r_o = 0.35$, is filled with an electrically conducting Boussinesq fluid, which is assumed to have constant kinetic viscosity $\nu$, thermal diffusivity $\kappa$, and magnetic diffusivity $\eta$.
 }
-This leads to an equation of continuity for incompressible fluid given as
+This leads to an equation of continuity as
+% for incompressible fluid given as
 %
 \begin{equation}
 \nabla \cdot \bvec{u} = 0,
@@ -39,8 +41,8 @@ E \left( \frac{\partial\bvec{u}}{\partial t} +
 \\
 \displaystyle
 \hspace*{\fill}
- -2 \bvec{e}_z \times \bvec{u}
- + Ra_f \frac{\bvec{r}}{r_o} T
+ -2 \hat{z} \times \bvec{u}
+ + Ra_f T \frac{\bvec{r}}{r_o}
  + \frac{1}{Pm} \bvec{J} \times \bvec{B} ,
 \end{array}
 \label{eq:momentum}
@@ -61,10 +63,9 @@ E \left( \frac{\partial\bvec{u}}{\partial t} +
 \end{equation}
 %
 where $t$ is the time, $\bvec{\omega}$ is the vorticity, $P$ is the pressure, $\bvec{r}$ is the position vector, and $\bvec{J}$ is the electric current density.
-The length, time, pressure, temperature, and magnetic field are respectively scaled by $D$, $D^2/\nu$, $\nu^2 /D^2$, $\beta_o D$, and $(\rho \mu_0 \Omega \eta )^{1/2}$, % where $D = r_o - r_i$, $\nu$ is the kinematic viscosity, $\beta_o$ is the temperature gradient at the core-mantle boundary (CMB), 
-{\color{blue}
+The length, time, pressure, temperature, and magnetic field are respectively scaled by $D$, $D^2/\nu$, $\nu^2 /D^2$, $\beta_o D$, and $(\rho \mu_0 \Omega \eta )^{1/2}$,
+% where $D = r_o - r_i$, $\nu$ is the kinematic viscosity, $\beta_o$ is the temperature gradient at the core-mantle boundary (CMB), 
 where $D = r_o - r_i$, $\rho$, $\mu_0$, and $\beta_o$ are the thickness of the outer core, the mean density of the conductive fluid, the magnetic permeability of vacuum, and the temperature gradient at the core-mantle boundary (CMB), respectively.
-}
 %$\rho$ is the mean density of core fluid, $\mu_0$ is the magnetic permeability of vacuum.
 The dimensionless numbers included in the governing equations are the Rayleigh number, $Ra_f$, the Ekman number, $E$, the Prandtl number, $Pr$, and the magnetic Prandtl number, $Pm$, which are defined as
 %
@@ -76,13 +77,12 @@ Pm = \frac{\nu}{\eta},
 \label{eq:dimensionless_numbers}
 \end{equation}
 %
-where $\alpha$ is the coefficient of thermal volume expansion, $g_o$ is the gravity at $r = r_o$, and $\kappa$ is the thermal diffusivity.
+where $\alpha$ is the coefficient of thermal volume expansion, and $g_o$ is the gravity at $r = r_o$.
+% , and $\kappa$ is the thermal diffusivity.
 
 %
 % Numerical simulations are carried out in the spherical coordinates, $(r, \theta, \phi)$.
-The solenoidal vector fields, $\bvec{u}$ and $\bvec{B}$, are decomposed into the toroidal and poloidal components
-{\color{red}
-as,
+The solenoidal vector fields, $\bvec{u}$ and $\bvec{B}$, are decomposed into the toroidal and poloidal components as
 %
 \begin{equation}
     \bvec{u} (\bvec{r}, t) = \nabla \times ( u_T (\bvec{r}, t) \hat{\bvec{r}} ) + \nabla \times \nabla \times ( u_S (\bvec{r}, t) \hat{\bvec{r}} ),
@@ -93,19 +93,14 @@ as,
     \bvec{B} (\bvec{r}, t) = \nabla \times ( B_T (\bvec{r}, t) \hat{\bvec{r}} ) + \nabla \times \nabla \times ( B_S (\bvec{r}, t) \hat{\bvec{r}} ),
 \label{eq:BT_BS}
 \end{equation}
-where $\bvec{r}$ is the position vector, and $\hat{\bvec{r}}$ is the radial unit vector.
-}
-% Their 
-{\color{red}
-Toroidal and poloidal scalar functions for the velocity and magnetic fields, $u_T (\bvec{r}, t)$, $u_S (\bvec{r}, t)$, $B_T (\bvec{r}, t)$, $B_S (\bvec{r}, t)$, and the temperature $T (\bvec{r}, t)$
-}
-are expanded into spherical harmonics in the horizontal directions.
-{\color{red}
-For example, $T (\bvec{r}, t)$ is expanded as
+where % $\bvec{r}$ is the position vector, and 
+$\hat{\bvec{r}}$ is the radial unit vector.
+Toroidal and poloidal scalar functions for the velocity and magnetic fields, $u_T (\bvec{r}, t)$, $u_S (\bvec{r}, t)$, $B_T (\bvec{r}, t)$, and $B_S (\bvec{r}, t)$, 
+are expanded into spherical harmonics in the horizontal directions. For example, $u_{S} (\bvec{r}, t)$ is expanded as
 %
 \begin{equation}
-    T(\bvec{r}, t) = \sum_{l=0}^{L_{\rm max}} \sum_{m=-l}^{l} T_l^m (r, t) Y_l^{|m|} (\theta, \phi),
-\label{eq:T_expansion}
+    u_{S} (\bvec{r}, t) = \sum_{l=1}^{L_{\rm max}} \sum_{m=-l}^{l} u_{Sl}^{\ m} (r, t) Y_l^{|m|} (\theta, \phi),
+\label{eq:Us_expansion}
 \end{equation}
 %
 where $L_{\rm max}$ is the truncation of spherical harmonic expansion, and
@@ -121,9 +116,17 @@ Y_l^{|m|} (\theta, \phi) = \left\{
 \label{eq:def_of_Ylm}
 \end{equation}
 %
-where, $P_l^m (\cos \theta )$ is a Schmidt quasi-normalized associated Legendre polynomial with degree $l$ and order $m$ 
-{\color{blue} (Winch et al., 2005 \cite{Winch:2005}).}
-The so-called Chebyshev grid is used for the radial grid points defined as
+where, $P_l^m (\cos \theta )$ is a Schmidt quasi-normalized associated Legendre polynomial with degree $l$ and order $m$ (Winch et al., 2005 \cite{Winch:2005}).
+The temperature field is also expanded into the spherical harmonics coefficients as 
+%
+\begin{equation}
+    T(\bvec{r}, t) = \sum_{l=0}^{L_{\rm max}} \sum_{m=-l}^{l} T_l^m (r, t) Y_l^{|m|} (\theta, \phi).
+\label{eq:T_expansion}
+\end{equation}
+%
+
+In the radial direction, scalar function, $u_T (\bvec{r}, t)$, $u_S (\bvec{r}, t)$, $B_T (\bvec{r}, t)$, $B_S (\bvec{r}, t)$, and $T(\bvec{r}, t)$, are differentiated by the second-order finite difference method. 
+To obtain high spatial resolution near the boundaries and a smooth transition of grid spacing, the so-called Chebyshev grid is used for the radial grid points defined as
 %
 \begin{equation}
 r_n = r_i + \frac{r_o - r_i}{2} \left\{ 1 - \cos \left( \pi \frac{n-1}{N_r-1} \right) \right\} ~~\;\;\;\; (n = 1, \cdots , N_r) ,
@@ -131,22 +134,15 @@ r_n = r_i + \frac{r_o - r_i}{2} \left\{ 1 - \cos \left( \pi \frac{n-1}{N_r-1} \r
 \end{equation}
 %
 where $N_r$ is the number of radial grids.
-Then, high spatial resolution near the boundaries and a smooth transition of grid spacing are provided.
-}
-Second-order finite differences are used in the radial direction.
-For the time stepping, the Crank-Nicolson scheme is adopted for linear terms, such as the diffusion, buoyancy, and Coriolis terms, and the second order Adams-Bashforth scheme is used for the other terms.
+
+For the time integration, the Crank-Nicolson scheme is adopted for the diffusion terms, and the second order Adams-Bashforth scheme is used for the other terms.
 
 The no-slip condition for the velocity field is imposed at impermeable boundary surfaces, and the inner core is assumed to co-rotate with the mantle, which leads to $\bvec{u} = {\bf 0}$.
 The regions outside the spherical shell corresponding to the inner core and the mantle are assumed to be electrical insulators for simplicity, so that the magnetic field in the spherical shell is continuous to a potential field both at $r = r_i$ and $r = r_o$.
-A uniform temperature gradient at the CMB is imposed as $\beta_o = -d T_s / dr |_{r = r_o} = 0.4225$, where $T_s (r)$ is satisfied with $\nabla^2 T_s = 0$.
-% Then, that 
-{\color{red}
-Temperature gradient
-}
-at the inner core boundary (ICB) is determined from the balance between the heat flux 
-{\color{red}
-into and out of the spherical shell at $r = r_i$ and $r = r_o$, respectively.
-}
+A uniform temperature gradient at the CMB is imposed as $\beta_o = -d T / dr |_{r = r_o} = 0.4225$. 
+To satisfy $T (r)$ with $\nabla^2 T = 0$,
+the temperature gradient at the inner core boundary (ICB) is determined from the balance between the heat flux into at $r = r_i$ and out from $r = r_o$. 
+Consequently, the uniform temperature gradient at the ICB is set to $-d T / dr |_{r = r_i} = (r_o/r_i)^2 \beta_o$.
 
 The initial condition for numerical simulations is set as follows; $\bvec{u} = {\bf 0}$ for the velocity field, a geocentric magnetic dipole moment whose tilt angle from the rotation axis is $\pi / 4$, and a component of degree 4 and order 4 of spherical harmonics for the temperature as adopted by a dynamo benchmark (Christensen et al., 2001).
 The dimensionless parameters are set as $Ra_f = 2000$, $E = 6 \times 10^{-4}$, $Pr = 1$, and $Pm = 5$ on the basis of results by Sreenivasan et al.\ (2014) \cite{Sreenivasan:2014}.
@@ -154,26 +150,22 @@ The dimensionless parameters are set as $Ra_f = 2000$, $E = 6 \times 10^{-4}$, $
 
 \subsection{Equatorial symmetry}
 
-{\color{red}
-We investigate possible variations in equatorial symmetry of the velocity and magnetic fields in relation to polarity reversals of the axial dipole magnetic field.
-}
+We investigate possible variations in equatorial symmetry of the velocity and magnetic fields in relation to polarity reversals. % of the axial dipole magnetic field.
 Dimensionless kinetic energy density and dimensionless magnetic energy density are respectively defined as
 %
 \begin{equation}
-E_{\rm kin} = \frac{1}{2 V}
-  \int_V \bvec{u}^2 d V ,
+E_{\rm kin} = \frac{1}{V}
+  \int_V \frac{1}{2} \bvec{u}^2 d V ,
 \label{eq:Ekin}
 \end{equation}
 %
 \begin{equation}
-E_{\rm mag} = \frac{1}{2 V Pm E}
-  \int_V \bvec{B}^2 d V ,
+E_{\rm mag} = \frac{1}{V Pm E}
+  \int_V \frac{1}{2} \bvec{B}^2 d V ,
 \label{eq:Emag}
 \end{equation}
 %
-{\color{red}
 where integrals are carried out over the volume of spherical shell, $V$.
-}
 Temporal variations of kinetic and magnetic energy densities can be derived from (\ref{eq:momentum}) and (\ref{eq:induction}), respectively.
 Their energy equations are given as
 %
@@ -210,7 +202,7 @@ Their energy equations are given as
 % where volume integrals are carried out over the spherical shell.
 % We investigate possible variations in equatorial symmetry of the velocity and magnetic fields in relation to polarity reversals of the axial dipole magnetic field.
 Any vector can be divided into equatorially symmetric and antisymmetric constituents.
-We represent the velocity and magnetic field as, for example, 
+We represent the velocity and magnetic field as,
 %
 \begin{equation}
 \bvec{u} = \bvec{u}^s + \bvec{u}^a, ~~~
@@ -219,7 +211,7 @@ We represent the velocity and magnetic field as, for example,
 \end{equation}
 %
 where superscripts $s$ and $a$ denote equatorially symmetric and antisymmetric fields, respectively.
-We then derive the energy equations for the equatorially symmetric and antisymmetric velocity field, {\color{red} respectively given as}
+We then derive the energy equations for the equatorially symmetric and antisymmetric velocity field, respectively, given as
 %
 \begin{eqnarray}
 \displaystyle
@@ -252,7 +244,7 @@ We then derive the energy equations for the equatorially symmetric and antisymme
 \frac{\partial}{\partial t}
  \int \frac{|\bvec{u}^a|^2}{2} d V 
  & = & \displaystyle
-\hspace*{1em}
+% \hspace*{1em}
 \int \left\{
       \frac{Ra_f}{E}T^a \bvec{u}^a\cdot \frac{\bvec{r}}{r_{o}}
      \right.
@@ -309,7 +301,8 @@ and
       \bvec{u}^a \cdot 
           ( \bvec{J}^s \times \bvec{B}^s )
     + \bvec{u}^s \cdot 
-          ( \bvec{J}^s \times \bvec{B}^s )
+%           ( \bvec{J}^s \times \bvec{B}^s )
+{\color{red} ( \bvec{J}^s \times \bvec{B}^a )}
     \right.
 \nonumber \\
 \hspace{3em}
@@ -321,30 +314,30 @@ and
 \label{eq:energy_Ba}
 \end{eqnarray}
 %
-The right-hand-sides of (\ref{eq:energy_us}) and (\ref{eq:energy_ua}) show energy transfer due to respective forces {\color{red} as follows}.
+The right-hand-sides of (\ref{eq:energy_us}) and (\ref{eq:energy_ua}) show energy transfer due to respective forces as follows.
 The first terms corresponding to the work by buoyancy mean that equatorially symmetric and antisymmetric temperature fields contribute to kinetic energy for the equatorially symmetric and antisymmetric velocity fields, respectively.
 The second terms, the work by the Lorentz force, show energy transfer between kinetic and magnetic energies, as they are also found in (\ref{eq:energy_Bs}) and (\ref{eq:energy_Ba}); that is, $\bvec{u}^s \cdot (\bvec{J}^s \times \bvec{B}^a)$ corresponds to energy transfer between $\bvec{u}^s$ and $\bvec{B}^a$, $\bvec{u}^s \cdot (\bvec{J}^a \times \bvec{B}^s)$ to that between $\bvec{u}^s$ and $\bvec{B}^s$, $\bvec{u}^a \cdot (\bvec{J}^a \times \bvec{B}^a)$ to that between $\bvec{u}^a$ and $\bvec{B}^a$, and $\bvec{u}^a \cdot (\bvec{J}^s \times \bvec{B}^s)$ to that between $\bvec{u}^a$ and $\bvec{B}^s$.
-In other words, $-\bvec{u}^s \cdot (\bvec{J}^s \times \bvec{B}^a)$ contributes to temporal variations of $\bvec{B}^a$ caused by $\bvec{u}^s$, $-\bvec{u}^s \cdot (\bvec{J}^a \times \bvec{B}^s)$ to those of $\bvec{B}^s$ by $\bvec{u}^a$, $-\bvec{u}^a \cdot (\bvec{J}^a \times \bvec{B}^a)$ to those of $\bvec{B}^a$ by $\bvec{u}^a$, and $-\bvec{u}^a \cdot (\bvec{J}^s \times \bvec{B}^s)$ to those of $\bvec{B}^s$ by $\bvec{u}^a$, as found in (\ref{eq:energy_Bs}) and (\ref{eq:energy_Ba}).
-The third terms in the right-hand-sides of (\ref{eq:energy_us}) and (\ref{eq:energy_ua}) express energy transfer between $\bvec{u}^s$ and $\bvec{u}^a$ caused by the advection, which does not contribute to total kinetic energy.
-The fourth terms indicate the {\color{red} viscous} dissipation. 
+In other words, $-\bvec{u}^s \cdot (\bvec{J}^s \times \bvec{B}^a)$ contributes to temporal variations of $\bvec{B}^a$ caused by $\bvec{u}^s$, 
+$-\bvec{u}^s \cdot (\bvec{J}^a \times \bvec{B}^s)$ to those of $\bvec{B}^s$ by % $\bvec{u}^a$, 
+{\color{red} $\bvec{u}^s$,}
+$-\bvec{u}^a \cdot (\bvec{J}^a \times \bvec{B}^a)$ to those of $\bvec{B}^a$ by $\bvec{u}^a$, and 
+$-\bvec{u}^a \cdot (\bvec{J}^s \times \bvec{B}^s)$ to those of $\bvec{B}^s$ by $\bvec{u}^a$, as found in (\ref{eq:energy_Bs}) and (\ref{eq:energy_Ba}).
+The third terms in the right-hand-sides of (\ref{eq:energy_us}) and (\ref{eq:energy_ua}) express energy transfer between $\bvec{u}^s$ and $\bvec{u}^a$ due to the advection, which does not contribute to total kinetic energy.
+The fourth terms indicate the viscous dissipation. 
 % due to viscosity.
-The third terms in the right-hand-sides of (\ref{eq:energy_Bs}) and (\ref{eq:energy_Ba}) indicate the dissipation due to the magnetic diffusion.
+The third terms in the right-hand-sides of (\ref{eq:energy_Bs}) and (\ref{eq:energy_Ba}) indicate the Ohmic dissipation.
 The forth terms correspond to the Poynting flux which can be expressed, for example, as
 %
 \begin{equation}
 -\int \nabla \cdot
   ( \bvec{E}^a \times \bvec{B}^s ) d V =
- \int ' (\bvec{E}^a \times \bvec{B}^s )
-   \cdot \bvec{e}_r d S .
+ \oint (\bvec{E}^a \times \bvec{B}^s )
+   \cdot \hat{\bvec{r}} d S .
 \label{eq:Poynting}
 \end{equation}
 %
 
-{\color{blue}
-We implemented subroutines to evaluate these volume averaged energy transfers decomposed to the equatorial symmetry into a numerical dynamo code, Calypso Ver.~1.2
-\color{red}
-(Matsui et al., 2014 \cite{Matsui:2014}) and performed dynamo simulations with dipole reversals.
+We implemented subroutines to evaluate these volume averaged energy transfers decomposed to the equatorial symmetry into a numerical dynamo code, Calypso Ver.~1.2 (Matsui et al., 2014 \cite{Matsui:2014}) and performed dynamo simulations with polarity reversals.
 %
 The source code and documents of Calypso Ver.~1.2 can be found in the following URL;\\
 https://github.com/geodynamics/calypso\\
-}
