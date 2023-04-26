@@ -41,7 +41,7 @@ E \left( \frac{\partial\bvec{u}}{\partial t} +
 \\
 \displaystyle
 \hspace*{\fill}
- -2 \hat{z} \times \bvec{u}
+ -2 \hat{\bvec{z}} \times \bvec{u}
  + Ra_f T \frac{\bvec{r}}{r_o}
  + \frac{1}{Pm} \bvec{J} \times \bvec{B} ,
 \end{array}
@@ -72,12 +72,12 @@ The dimensionless numbers included in the governing equations are the Rayleigh n
 \begin{equation}
 Ra_f = \frac{\alpha g_o \beta_o D^2}{\nu \Omega},~~
 E = \frac{\nu}{\Omega D^2},~~
-Pr = \frac{\nu}{\kappa},~~
+Pr = \frac{\nu}{\kappa},~~ \mbox{and \ }
 Pm = \frac{\nu}{\eta},
 \label{eq:dimensionless_numbers}
 \end{equation}
 %
-where $\alpha$ is the coefficient of thermal volume expansion, and $g_o$ is the gravity at $r = r_o$.
+where $\alpha$ is the coefficient of thermal volume expansion, and $g_o$ is the amplitude of gravity at $r = r_o$.
 % , and $\kappa$ is the thermal diffusivity.
 
 %
@@ -116,7 +116,8 @@ Y_l^{|m|} (\theta, \phi) = \left\{
 \label{eq:def_of_Ylm}
 \end{equation}
 %
-where, $P_l^m (\cos \theta )$ is a Schmidt quasi-normalized associated Legendre polynomial with degree $l$ and order $m$ (Winch et al., 2005 \cite{Winch:2005}).
+where, $P_l^m (\cos \theta )$ is a Schmidt quasi-normalized associated Legendre polynomial with degree $l$ and order $m$ (Winch et al., 2005). 
+% \cite{Winch:2005}).
 The temperature field is also expanded into the spherical harmonics coefficients as 
 %
 \begin{equation}
@@ -125,7 +126,7 @@ The temperature field is also expanded into the spherical harmonics coefficients
 \end{equation}
 %
 
-In the radial direction, scalar function, $u_T (\bvec{r}, t)$, $u_S (\bvec{r}, t)$, $B_T (\bvec{r}, t)$, $B_S (\bvec{r}, t)$, and $T(\bvec{r}, t)$, are differentiated by the second-order finite difference method. 
+In the radial direction, scalar functions, $u_T (\bvec{r}, t)$, $u_S (\bvec{r}, t)$, $B_T (\bvec{r}, t)$, $B_S (\bvec{r}, t)$, and $T(\bvec{r}, t)$, are differentiated by the second-order finite difference method. 
 To obtain high spatial resolution near the boundaries and a smooth transition of grid spacing, the so-called Chebyshev grid is used for the radial grid points defined as
 %
 \begin{equation}
@@ -139,13 +140,13 @@ For the time integration, the Crank-Nicolson scheme is adopted for the diffusion
 
 The no-slip condition for the velocity field is imposed at impermeable boundary surfaces, and the inner core is assumed to co-rotate with the mantle, which leads to $\bvec{u} = {\bf 0}$.
 The regions outside the spherical shell corresponding to the inner core and the mantle are assumed to be electrical insulators for simplicity, so that the magnetic field in the spherical shell is continuous to a potential field both at $r = r_i$ and $r = r_o$.
-A uniform temperature gradient at the CMB is imposed as $\beta_o = -d T / dr |_{r = r_o} = 0.4225$. 
-To satisfy $T (r)$ with $\nabla^2 T = 0$,
+An uniform temperature gradient at the CMB is imposed as $\beta_o = -\partial T_0^0 / \partial r |_{r = r_o} = 0.4225$. 
+To satisfy $T_0^0 (r, t)$ with $\nabla^2 T_0^0 = 0$,
 the temperature gradient at the inner core boundary (ICB) is determined from the balance between the heat flux into at $r = r_i$ and out from $r = r_o$. 
-Consequently, the uniform temperature gradient at the ICB is set to $-d T / dr |_{r = r_i} = (r_o/r_i)^2 \beta_o$.
+Consequently, the uniform temperature gradient at the ICB is set to $-\partial T_0^0 / \partial r |_{r = r_i} = (r_o/r_i)^2 \beta_o$.
 
 The initial condition for numerical simulations is set as follows; $\bvec{u} = {\bf 0}$ for the velocity field, a geocentric magnetic dipole moment whose tilt angle from the rotation axis is $\pi / 4$, and a component of degree 4 and order 4 of spherical harmonics for the temperature as adopted by a dynamo benchmark (Christensen et al., 2001).
-The dimensionless parameters are set as $Ra_f = 2000$, $E = 6 \times 10^{-4}$, $Pr = 1$, and $Pm = 5$ on the basis of results by Sreenivasan et al.\ (2014) \cite{Sreenivasan:2014}.
+The dimensionless parameters are set as $Ra_f = 2000$, $E = 6 \times 10^{-4}$, $Pr = 1$, and $Pm = 5$ on the basis of results by Sreenivasan et al.\ (2014). % \cite{Sreenivasan:2014}.
 
 
 \subsection{Equatorial symmetry}
@@ -174,7 +175,8 @@ Their energy equations are given as
  \int_V \frac{|\bvec{u}|^2}{2} d V
  &=& \int_V \left\{
     - |\bvec{\omega}|^2 
-    + \frac{Ra_f}{E}T \bvec{u}\cdot \bvec{e}_r
+    + \frac{Ra_f}{E}T \bvec{u}\cdot 
+    \frac{\bvec{r}}{r_o}
       \right.
 \nonumber \\
  & & \left.
@@ -337,7 +339,9 @@ The forth terms correspond to the Poynting flux which can be expressed, for exam
 \end{equation}
 %
 
-We implemented subroutines to evaluate these volume averaged energy transfers decomposed to the equatorial symmetry into a numerical dynamo code, Calypso Ver.~1.2 (Matsui et al., 2014 \cite{Matsui:2014}) and performed dynamo simulations with polarity reversals.
+We implemented subroutines to evaluate these volume averaged energy transfers decomposed to the equatorial symmetry into a numerical dynamo code, Calypso Ver.~1.2 (Matsui et al., 2014) 
+% \cite{Matsui:2014}) 
+and performed dynamo simulations with polarity reversals.
 %
 The source code and documents of Calypso Ver.~1.2 can be found in the following URL;\\
 https://github.com/geodynamics/calypso\\
