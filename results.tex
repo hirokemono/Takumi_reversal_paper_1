@@ -2,117 +2,69 @@
 \label{section:results}
 
 We performed a dynamo simulation with $E = 6.0 \times 10^{-4}$, $Ra_f = 2000$, $Pr = 1.0$, and $Pm = 5.0$. 
-The dimensionless time, $t$, is scaled by the viscous diffusion time, $\tau_\nu = D^2 / \nu$, whereas the magnetic diffusion time, $\tau_\eta = D^2 / \eta = Pm D^2 / \nu = 5 \tau_\nu$ is used to show the results of time evolution. % the present study.
+The dimensionless time, $t$, is scaled by the viscous diffusion time, $\tau_\nu = D^2 / \nu$, whereas the magnetic diffusion time, $\tau_\eta = D^2 / \eta = Pm D^2 / \nu = 5 \tau_\nu$ is used to show the results of time evolution.
 The simulation was performed for approximately $85 \tau_\eta$, and the average ratio of magnetic to kinetic energies, $E_{\rm mag} / E_{\rm kin}$, was approximately 0.63. 
-% To determine the direction of the dipole component of the generated magnetic field,  
 The dipole tilt angle, $\theta_D$, between the directions of rotation axis and the magnetic dipole moment was calculated from the radial component of the magnetic field with spherical harmonic degree one  at the CMB.
 
 \input{fig_timevo_E_tilt.tex}
 \input{fig_timevo_tilt_P123.tex}
 
-% As seen the evolution of dipole tilt angle in Fig.~\ref{fig:sph_shell_275_full}, the present case has stable dipole period and periods with 13 dipole reversal and 6 excursion events. 
-{\color{red}
 The result shows that there are periods during which the dipole field was stable and those during which 13 polarity reversals and 6 excursions occurred (see Fig.~\ref{fig:sph_shell_275_full}).
-}
 In the present study, we choose 8 periods shown by double headed arrows in Fig.~\ref{fig:sph_shell_275_full} including these polarity reversals, and investigate energy transfer among the kinetic and magnetic energies for the equatorially symmetric and antisymmetric components. 
 We also carried out 7 simulations starting from snapshots in Period 1, 2 and 3. 
-% As seen in Fig.~\ref{fig:dipole_tilt_retries}, these results departs from the initial simulation result except for the case Retry 3-2, but these retried cases also have reversals and excursions. 
-% We will discuss the reason why these retried cases go to different solutions in the discussion section.
-{\color{red}
 These results were found to depart from the original result except for the case Retry 3-2, but these retried cases also include polarity reversals and excursions (see Fig.~\ref{fig:dipole_tilt_retries}). 
 We will discuss the reason why these retried cases give rise to different results in the discussion section.
-}
 
 \subsection{Characteristics of the fields during polarity reversals}
 
 First, we investigate characteristics of the temperature field during a polarity reversal by choosing a result between $13.0 \le t/\tau_{\eta} \le 14.0$. 
 As shown in Fig.~\ref{fig:temperature_rendering}b, the equatorially antisymmetric component of the temperature is larger than the equatorially symmetric component of the temperature during the polarity reversals and excursions, while the equatorially symmetric component of the temperature is approximately 1.5 times larger than the equatorially antisymmetric component. 
-% Looking at the three dimensional structure of the temperature, hot material rises strongly in the southern hemisphere during the polarity reversal, while hot region inside the tangent cylinder can be found in the both hemisphere (See Fig.~\ref{fig:temperature_rendering} and movie in the supplement materials). 
-{\color{red}
 Volume rendering images of the temperature show that hot material rises strongly in the southern hemisphere during the polarity reversal, and that hot regions inside the tangent cylinder can be found in the both hemisphere before and after the reversal event
 (see Fig.~\ref{fig:temperature_rendering} and movie in the supplement materials). 
-}
 However, any feature corresponding to the temperature does not appear in the radial magnetic field at the outer boundary of the spherical shell, 
-{\color{green}
 because the upward flow along with the plumes must be diverged near the CMB and the magnetic lines of force also diverge with the diverging flow.
-}
 
 Secondly, we take time averages of the fields during the stable dipole and reversing periods. 
 We choose the amplitude of the axial dipole component given by the Gauss coefficient $g_{1}^{0}$ at $r = 2.8$ obtained from the poloidal magnetic field at the outer boundary of the shell, $r = r_{o}$. 
-% As shown in Fig.~\ref{Fig:Reversal_period_def}, 
 We define the reversing periods when $\left| g_{1}^{0} \right|^2 < 4.9 \times 10^{-5}$ in the present study (see Fig.~\ref{Fig:Reversal_period_def}). 
 
 \input{fig_timevo_tilt_E_T_Br.tex}
 \input{fig_tilt_occurrence.tex}
 \input{fig_spectra_E_T}
 
-% As shown in Fig.~\ref{fig:temperature_rendering}, large warm region is only observed in the southern hemisphere. 
-% We compare zonally power spectra of the equatorially symmetric and antisymmetric components of the kinetic energy and temperature in the stable and reversal periods using the Retry 1-1 case. 
-{\color{red}
 Fig.~\ref{fig:KE_temp_spectra_m} shows spectra of the kinetic energy and square of temperature for the equatorially symmetric and antisymmetric components
 with respect to the spherical harmonic order, $m$, for the Retry 1-1 case.
 We compare spectra obtained in polarity reversal periods with those in polarity stable periods.
-% The changes between stable and reversal periods are quite different between the axisymmetric ($m = 0$) and non-axisymmetric components ($m \ne 0$). 
-% In the non-axisymmetric components, equatorially symmetric component of kinetic energy and temperature is always larger than the equatorially antisymmetric component, and there is no significant change between the stable and reversing dipole period. 
 Spectra for the non-axisymmetric components ($m \ne 0$) show that the kinetic energy and square of temperature for the equatorially symmetric component are larger than those for the equatorially antisymmetric component irrespective of stable and reversal periods.
-% The toroidal kinetic energy at $m > 10$ in the reversing periods increases from the stable period, but the difference is not significant. 
 Any significant difference is not found between those in stable and reversal periods, although the kinetic energy in reversal periods is slightly larger than that in stable periods.
 
-% On the other hand, significant changes can be observed in the axisymmetric component of the temperature and toroidal kinetic energy. 
-% In the toroidal kinetic energy, equatorially antisymmetric component in the reversing period is approximately twice of that in the stable dipole period, while there is almost no change in the amplitude of the equatorially symmetric component of the axisymmetric kinetic energy.
 On the other hand, amplitudes of the axisymmetric component $(m = 0)$ show that the toroidal kinetic energy for the equatorially antisymmetric flow in reversal periods is approximately twice of that in stable periods, but that the toroidal kinetic energy for the equatorially symmetric flow in reversal periods is nearly equal to that in stable periods.
-% Consequently, the equatorially antisymmetric component of the toroidal kinetic energy is larger than the equatorially symmetric component of them.
 Consequently, the toroidal kinetic energy for the equatorially antisymmetric and axisymmetric components is larger than that for the equatorially symmetric and  axisymmetric components  in reversal periods.
 It is noted that there is no remarkable difference between poloidal kinetic energy for the equatorially symmetric and antisymmetric flows irrespective of reversal and stable periods.
-% The axisymmetric component of temperature in the reversing period increases approximately 3 times of that in the stable periods. 
 The spectrum of the square of the temperature has similar change as that for the toroidal kinetic energy from the stable period to the reversal period.
 The square of equatorially antisymmetric temperature with the axial symmetry in reversal periods is approximately three times larger than that in stable periods.
-}
-A difference of the temperature spectrum from the toroidal kinetic energy spectrum is that the equatorially antisymmetric component of the axisymmetric temperature is larger than that of the non-axisymmetric temperature. % , while the non-axisymmetric components of the kinetic energy is larger than the equatorially antisymmetric components of the kinetic energy. 
+A difference of the temperature spectrum from the toroidal kinetic energy spectrum is that the equatorially antisymmetric component of the axisymmetric temperature is larger than that of the non-axisymmetric temperature.
 Consequently, the equatorially antisymmetric temperature is larger than the equatorially symmetric temperature during reversal periods (see Fig.~\ref{fig:temperature_rendering}). 
-{\color{red}
-% In addition, the equatorially antisymmetric component of the axisymmetric temperature is larger than the equatorially symmetric component of that even in stable periods.
 In addition, the equatorially antisymmetric temperature with the axial symmetry is approximately 1.5 times larger than the equatorially symmetric temperature with the axial symmetry even in stable periods.
-}
 
 \input{fig_timevo_energy_transfer.tex}
 
 \subsection{Investigation of energy transfers}
 \label{sec:energy_transfer}
 
-{\color{red}
-% We investigate the energy transfer during polarity reversals with splitting the contribution of the equatorially symmetric and anti-symmetric components of the flow, magnetic field, and temperature as described in the equations (\ref{eq:energy_us}) and (\ref{eq:energy_ua}).
 We investigate the energy transfer during polarity reversals through separation of the flow, magnetic field and temperature into the equatorially symmetric and anti-symmetric components as in eqs.~(\ref{eq:energy_us}) and (\ref{eq:energy_ua}).
-}
 
 First, we investigate time evolution of the energy transfers for one polarity reversal in Retry 1-1 case (see Fig.~\ref{fig:dipole_tilt_retries}). 
-{\color{red}
-% The time evolutions of the energy transfers for the equatorially symmetric and antisymmetric kinetic energies are plotted as well as the evolution of dipole tilt angle in Fig.~\ref{fig:energy_flux_evolution_retry1_1}. 
 Fig.~\ref{fig:energy_flux_evolution_retry1_1} shows the time evolution of the dipole tilt angle, and the energy transfers between kinetic energies for the equatorially symmetric and antisymmetric flows.
-% As described in the previous subsection, the kinetic energy for the equatorially antisymmetric flow does not overcome that for the equatorially symmetric flow. 
  As described in the previous subsection, the kinetic energy for $\bvec{u}^a$ does not overcome that for $\bvec{u}^s$ (Fig.~\ref{fig:energy_flux_evolution_retry1_1}b).
-% In addition, there is no significant change in the overall amplitude of energy transfers during the stable and reversal periods. 
 In addition, there is no significant variation in the overall amplitude of energy transfers during the stable and reversal periods (Fig.~\ref{fig:energy_flux_evolution_retry1_1}c and e).
-% Energy transfer by the buoyancy is the largest energy input to the kinetic energy for both of the equatorially symmetric and antisymmetric flows. 
 Energy transfer by the buoyancy is the largest energy input to the kinetic energy for both of $\bvec{u}^s$ and $\bvec{u}^a$.
-% The work of Lorentz force is always negative, which shows that the kinetic energy for both flows is transferred to the magnetic energy. 
 The work of Lorentz force is always negative, which means that the kinetic energy for both $\bvec{u}^s$ and $\bvec{u}^a$ is transferred to the magnetic energy.
-% The advection always transfers energy from the equatorially symmetric flow to the antisymmetric flow (see Fig.~\ref{fig:energy_flux_evolution_retry1_1}c and e), although energy transfer by the advection is the smallest.
 The advection always transfers energy from $\bvec{u}^s$ to $\bvec{u}^a$ (see Fig.~\ref{fig:energy_flux_evolution_retry1_1}c and e), although energy transfer by the advection is the smallest.
 Fig.~\ref{fig:energy_flux_evolution_retry1_1}d and f shows deviations of the energy transfers from the time average over the period for Retry 1-1, in which one polarity reversal and one excursion occurred at around $t = 33.0$ and at around $t = 36.2$, respectively (Fig.~\ref{fig:energy_flux_evolution_retry1_1}a).
-}
-% 以下の意味は合っていますか？ Yeah, That is fine.
-{\color{magenta}
-% The same behavior can be found in the both events. 
-% For the equatorially symmetric components, the most significant change is the increasing the perturbation of the work of Lorentz force. 
-% This change corresponds to the decreasing the negative energy flux to kinetic energy, {\it i.e.}, decreasing the energy transfer to the magnetic energy due to the decreasing the magnetic energy. 
-% On the other hand, the change of the work of the Lorentz force for the equatorially antisymmetric components of the kinetic energy is less significant than that for the equatorially symmetric kinetic energy. 
 In the both events, deviation of the work by Lorentz force with the equatorial symmetry obviously increases, whereas that with the equatrial antisymmetry does not change significantly.
 The former corresponds to decrease of energy transfer to the magnetic field.
-% The increase of the buoyancy flux and work by the advection are more significant than the work of Lorentz force.
 The increase of the work by the buoyancy and advection to the equatorially antisymmetric flow is more significant than the work by Lorentz force.
-}
-% Looking at more detail, 
 The work by the advection increases first, and that by the buoyancy in the next. 
 The energy transfer by inertia increases the axisymmetric toroidal flow with the equatorial antisymmetry (see Fig.~\ref{fig:KE_temp_spectra_m}), because the buoyancy can be only the energy input to the poloidal flow.
 
@@ -121,15 +73,9 @@ The energy transfer by inertia increases the axisymmetric toroidal flow with the
 
 Next, we investigate the energy transfer to the kinetic energy for the 11 periods in total including the stable and reversal periods (see Figs.\ \ref{fig:sph_shell_275_full} and \ref{fig:dipole_tilt_retries}).
 We took time averages of the work by the Lorentz force, advection, and buoyancy to the equatorially symmetric and anti-symmetric flows in reversal periods, and calculated their deviations from the time averages.
-{\color{red}
-%As seen in Fig.~\ref{Fig:Change_flux_summary_6grp}, the perturbation of the work of Lorentz force and advection has similar behavior in the all periods, while the perturbation of the buoyancy flux has large variation among the periods.
 The deviation of the work by Lorentz force and advection is similar to each other in the all periods, while the deviation of the work by buoyance shows large variability among the periods (see Fig.~\ref{Fig:Change_flux_summary_6grp}).
-}
 The energy transfer from the equatorially symmetric flow to the magnetic field decreases (i.e.\ the deviation of the work by Lorentz force increases). 
-{\color{red}
-% For the equatorially antisymmetric components of the flow, the energy transfer by the work of the Lorentz force also decreases, but the amplitude is small. 
 The energy transfer to $\bvec{u}^a$ by the work of Lorentz force also decreases, although its amplitude is small.
-}
 The largest change is found in the energy transfer from $\bvec{u}^s$ to $\bvec{u}^a$ due to the work by advection. 
 The work by buoyancy caused by equatorially antisymmetric temperature $T^{a}$ also increases in most of the cases, although its amplitude is smaller than that by the advection. 
 The temperature structure during the reversal in Fig.~\ref{fig:temperature_rendering} and change of the kinetic energy spectra in Fig.~\ref{fig:KE_temp_spectra_m} suggest that the intense equatorially antisymmetric flow with the axial symmetry is induced by the advection to sustain the thermal wind inside the tangent cylinder. 
