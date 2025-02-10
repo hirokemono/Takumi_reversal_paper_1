@@ -3,14 +3,53 @@
 
 We performed a dynamo simulation with $E = 6.0 \times 10^{-4}$, $Ra_f = 2000$, $Pr = 1.0$, and $Pm = 5.0$. 
 The dimensionless time, $t$, is scaled by the viscous diffusion time, $\tau_\nu = D^2 / \nu$, whereas the magnetic diffusion time, $\tau_\eta = D^2 / \eta = Pm D^2 / \nu = 5 \tau_\nu$ is used to show the results of time evolution.
-The simulation was performed for approximately $85 \tau_\eta$, and the average ratio of magnetic to kinetic energies, $E_{\rm mag} / E_{\rm kin}$, was approximately 0.63. 
+The simulation was performed for approximately $120 \tau_\eta$. %$110 \tau_\eta$. 
+Time average of the Magnetic and the average ratio of magnetic to kinetic energies, $E_{\rm mag} / E_{\rm kin}$, was approximately 0.63. 
 The dipole tilt angle, $\theta_D$, between the directions of rotation axis and the magnetic dipole moment was calculated from the radial component of the magnetic field with spherical harmonic degree one  at the CMB.
 
 \input{fig_timevo_E_tilt.tex}
 \input{fig_timevo_tilt_P123.tex}
 
+{\color{blue}
+% In the following discussion, we define the reversal period when $\left| g_{1}^{0} \right|^2 < 4.9 \times 10^{-5}$ in the present study (see the bottom panel of Fig.~\ref{fig:sph_shell_275_full}). 
+In the following discussion, we define the reversal period as the period when $\left| g_{1}^{0} \right|^2 < 4.9 \times 10^{-5}$ in the present study (see the bottom panel of Fig.~\ref{fig:sph_shell_275_full}), where $g_{1}^{0}$ is the Gauss coefficient of the axial dipole field at $r=2.8$, which corresponds to the Earth’s surface, and is obtained from the poloidal magnetic field at the outer boundary of the shell ($r=r_o$).
+%
+\input{fig_timevo_tilt_E_T_Br.tex}
+% \input{fig_tilt_occurrence.tex}
+\input{fig_spectra_E_T}
+%
+The time average of the Magnetic Reynolds number $Rm = U_{rms} D / \eta$, dipolarity $f_{dip}$, typical horizontal wave number for the convection $\ell_{l}$, and local Rossby number $Ro_{\ell} = U_{rms} \ell_{l} / \pi \Omega $ in the stable and reversal phases are listed in Table \ref{table:average_dipolarity}. As following Christensen and Aubert (2006), $f_{dip} $ and $\ell_{l}$ are defined by
+%
+\begin{eqnarray}
+f_{dip} &=& \frac{\int_{\rm{CMB}} (\bvec{B}_{1}^{0})^2 dS}{\sum_{l=1}^{13} \int_{\rm{CMB}} (\bvec{B}_l)^2 dS}, \mbox{and} \\
+\ell_{l} &=& \frac{\sum_{l} \int l(\bvec{u}_{l})^2 dV}{\int \bvec{u}^2 dV},
+\end{eqnarray}
+where, $\bvec{B}_{1}^{0}$ is the dipole component of the magnetic field, and $\bvec{B}_{l}$ and $\bvec{u}_{l}$ are the spherical harmonic degree $l$ component of the magneitc field and flow velocity, respectively.
+%
+The dipolarity decreases significantly in the reversal phase because axial dipole component largely decreases during the reversal. However, the local Rossby number has small difference between stable and reversal phase.
+}
+%
+\begin{table}[h]
+\caption{Magnetic Reynolds number $Rm$, dipolarity $f_{dip}$, and local Rossby number $Ro_{\ell}$ in the spherical shell averaged over $96.0 t_{\eta} < t < 106.0 t_{\eta}$.}
+\label{table:average_dipolarity}
+\begin{tabular}{ccccc}
+ & $Rm$ & $f_{dip}$ & 
+  ${\ell}_{l}$ & $Ro_{\ell}$ \\ \hline
+\mbox{Stable} & $344.4 \pm 130.5 $ &
+                $0.208 \pm 0.029$ &
+                $8.523 \pm 0.3814$ & 
+                $0.112 \pm 0.047$ \\
+\mbox{Reverse} & $368.2 \pm 144.0 $ &
+                 $0.122 \pm 0.067$ &
+                 $8.514 \pm 0.6773$ & 
+                 $0.120 \pm 0.056$\\ \hline
+\end{tabular}
+\end{table}
+%
+
 The result shows that there are periods during which the dipole field was stable and those during which 12 polarity reversals and 4 excursions occurred (see Fig.~\ref{fig:sph_shell_275_full}).
-In the present study, we choose 8 periods shown by double headed arrows in Fig.~\ref{fig:sph_shell_275_full} including these polarity reversals, and investigate energy transfer among the kinetic and magnetic energies for the equatorially symmetric and antisymmetric components. 
+In the present study, we choose 11 %8
+periods shown by double headed arrows in Fig.~\ref{fig:sph_shell_275_full} including these polarity reversals, and investigate energy transfer among the kinetic and magnetic energies for the equatorially symmetric and antisymmetric components. 
 We also carried out 7 simulations starting from snapshots in Period 1, 2 and 3. 
 These results were found to depart from the original result except for the case Retry 3-2, but these retried cases also include polarity reversals and excursions (see Fig.~\ref{fig:dipole_tilt_retries}). 
 We will discuss the reason why these retried cases give rise to different results in the discussion section.
@@ -44,14 +83,8 @@ because the upward flow along with the plumes must be diverged near the CMB and 
 %We choose the amplitude of the axial dipole component given by the Gauss coefficient $g_{1}^{0}$ at $r = 2.8$ obtained from the poloidal magnetic field at the outer boundary of the shell, $r = r_{o}$. 
 {\color{magenta}
 Secondly, we take time averages of the fields during the stable and reversal periods. 
-We choose the amplitude of the axial dipole component given by the Gauss coefficient $g_{1}^{0}$ at $r = 2.8$, which corresponds to the Earth's surface, obtained from the poloidal magnetic field at the outer boundary of the shell, $r = r_{o}$.
+% We choose the amplitude of the axial dipole component given by the Gauss coefficient $g_{1}^{0}$ at $r = 2.8$, which corresponds to the Earth's surface, obtained from the poloidal magnetic field at the outer boundary of the shell, $r = r_{o}$.
 } 
-We define the reversal period when $\left| g_{1}^{0} \right|^2 < 4.9 \times 10^{-5}$ in the present study (see the bottom panel of Fig.~\ref{fig:sph_shell_275_full}). 
-
-\input{fig_timevo_tilt_E_T_Br.tex}
-% \input{fig_tilt_occurrence.tex}
-\input{fig_spectra_E_T}
-
 Fig.~\ref{fig:KE_temp_spectra_m} shows spectra of the kinetic energy and square of temperature for the equatorially symmetric and antisymmetric components
 with respect to the spherical harmonic order, $m$, for the Retry 1-1 case.
 We compare spectra obtained in polarity reversal periods with those in polarity stable periods.
@@ -78,6 +111,8 @@ The square of temperature for the equatorially antisymmetric and axisymmetric co
 It should be noted that the equatorially antisymmetric and axisymmetric temperature is larger than the non-axisymmetric temperature.
 }
 Consequently, the equatorially antisymmetric temperature is larger than the equatorially symmetric temperature during reversal periods (see Fig.~\ref{fig:temperature_rendering}). 
+% It should be noted that the T00 component in the symmetric temperature is included in Fig. 4.
+% Consequently, the symmetric temperature is smaller than the antisymmetric temperature in Fig. 3, on the contrary, in Fig. 4, the symmetric temperature exceeds the antisymmetric temperature due to the contribution of the T00 component to the symmetric temperature.
 %In addition, the equatorially antisymmetric temperature with the axial symmetry is approximately 1.5 times larger than the equatorially symmetric temperature with the axial symmetry even in stable periods.
 
 \input{fig_timevo_energy_transfer.tex}
@@ -100,7 +135,8 @@ The advection always transfers energy from $\bvec{u}^s$ to $\bvec{u}^a$ (see Fig
 Fig.~\ref{fig:energy_flux_evolution_retry1_1}e and g shows deviations of the energy transfers from the time average over the period for Retry 1-1, in which one polarity reversal and one excursion occurred at around $t = 33.0$ and at around $t = 36.2$, respectively (Fig.~\ref{fig:energy_flux_evolution_retry1_1}a).
 In the both events, deviation of the work by Lorentz force with the equatorial symmetry obviously increases, whereas that with the equatrial antisymmetry does not change significantly.
 The former corresponds to decrease of energy transfer to the magnetic field.
-The increase of the work by the buoyancy and advection to the equatorially antisymmetric flow is more significant than the work by Lorentz force.
+For the equatorially antisymmetric flow, the increase of the work by the buoyancy and advection %to the equatorially antisymmetric flow 
+is more significant than the work by Lorentz force.
 The work by the advection increases first, and that by the buoyancy in the next. 
 The energy transfer by inertia increases the axisymmetric toroidal flow with the equatorial antisymmetry (see Fig.~\ref{fig:KE_temp_spectra_m}), because the buoyancy can be only the energy input to the poloidal flow.
 
@@ -110,7 +146,7 @@ The energy transfer by inertia increases the axisymmetric toroidal flow with the
 
 Next, we investigate the energy transfer to the kinetic energy for the 11 periods in total including the stable and reversal periods (see Figs.\ \ref{fig:sph_shell_275_full} and \ref{fig:dipole_tilt_retries}).
 We took time averages of the work by the Lorentz force, advection, and buoyancy to the equatorially symmetric and antisymmetric flows in reversal periods, and calculated their deviations from the time averages.
-The deviation of the work by Lorentz force and advection is similar to each other in the all periods, while the deviation of the work by buoyance shows large variability among the periods (see Fig.~\ref{Fig:Change_flux_summary_6grp}).
+The deviation of the work by Lorentz force and advection is similar to each other in the all periods, while the deviation of the work by buoyancy shows large variability among the periods (see Fig.~\ref{Fig:Change_flux_summary_6grp}).
 The energy transfer from the equatorially symmetric flow to the magnetic field decreases (i.e.\ the deviation of the work by Lorentz force increases). 
 {\color {blue} 
 The advection transferes more kinetic energy from equatorially symmetric flow, $\bvec{u}^s$, to equatorially antisymmetric flow, $\bvec{u}^a$, during the reversal, but this amplitude of the deviation is approximately 0.3 times of the deviation of the work by the Lorentz force for the equatorially symmetric flow.
