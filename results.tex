@@ -4,7 +4,7 @@
 We performed a dynamo simulation with $E = 6.0 \times 10^{-4}$, $Ra_f = 2000$, $Pr = 1.0$, and $Pm = 5.0$. 
 The dimensionless time, $t$, is scaled by the viscous diffusion time, $\tau_\nu = D^2 / \nu$, whereas the magnetic diffusion time, $\tau_\eta = D^2 / \eta = Pm D^2 / \nu = 5 \tau_\nu$ is used to show the results of time evolution.
 The simulation was performed for approximately $120 \tau_\eta$. %$110 \tau_\eta$. 
-Time average of the Magnetic and the average ratio of magnetic to kinetic energies, $E_{\rm mag} / E_{\rm kin}$, was approximately 0.63. 
+Time average of magnetic to kinetic energies, $E_{\rm mag} / E_{\rm kin}$, was approximately 0.63. 
 The dipole tilt angle, $\theta_D$, between the directions of rotation axis and the magnetic dipole moment was calculated from the radial component of the magnetic field with spherical harmonic degree one  at the CMB.
 
 \input{fig_timevo_E_tilt.tex}
@@ -12,28 +12,33 @@ The dipole tilt angle, $\theta_D$, between the directions of rotation axis and t
 
 {\color{blue}
 % In the following discussion, we define the reversal period when $\left| g_{1}^{0} \right|^2 < 4.9 \times 10^{-5}$ in the present study (see the bottom panel of Fig.~\ref{fig:sph_shell_275_full}). 
-In the following discussion, we define the reversal period as the period when $\left| g_{1}^{0} \right|^2 < 4.9 \times 10^{-5}$ in the present study (see the bottom panel of Fig.~\ref{fig:sph_shell_275_full}), where $g_{1}^{0}$ is the Gauss coefficient of the axial dipole field at $r=2.8$, which corresponds to the Earth’s surface, and is obtained from the poloidal magnetic field at the outer boundary of the shell ($r=r_o$).
+We define the reversal period as the period when $\left| g_{1}^{0} \right|^2 < 4.9 \times 10^{-5}$ in the present study (see the bottom panel of Fig.~\ref{fig:sph_shell_275_full}), where $g_{1}^{0}$ is the Gauss coefficient of the axial dipole field at $r=2.8$, which corresponds to the Earth’s surface, and is obtained from the poloidal magnetic field at the outer boundary of the shell ($r=r_o$).
 %
 \input{fig_timevo_tilt_E_T_Br.tex}
 % \input{fig_tilt_occurrence.tex}
 \input{fig_spectra_E_T}
 %
-The time average of the Magnetic Reynolds number $Rm = U_{rms} D / \eta$, dipolarity $f_{dip}$, typical horizontal wave number for the convection $\ell_{l}$, and local Rossby number $Ro_{\ell} = U_{rms} \ell_{l} / \pi \Omega $ in the stable and reversal phases are listed in Table \ref{table:average_dipolarity}. As following Christensen and Aubert (2006), $f_{dip} $ and $\ell_{l}$ are defined by
+The time averages of the magnetic Reynolds number $Rm = U_{\rm rms} D / \eta$, dipolarity $f_{\rm dip}$, typical horizontal wave number for the convection $\ell_{l}$, and local Rossby number $Ro_{\ell} = U_{\rm rms} \ell_{l} / \pi \Omega $ in the stable and reversal phases are listed in Table \ref{table:average_dipolarity}. The root mean square of the velocity $U_{\rm rms}$ is evaluated from the average kinetic energy by $U_{\rm rms} = (2 E_{\rm kin})^{1/2}$. 
+As following Christensen and Aubert (2006), $f_{\rm dip} $ and $\ell_{l}$ are defined by
 %
 \begin{eqnarray}
-f_{dip} &=& \frac{\int_{\rm{CMB}} (\bvec{B}_{1}^{0})^2 dS}{\sum_{l=1}^{13} \int_{\rm{CMB}} (\bvec{B}_l)^2 dS}, \mbox{and} \\
+f_{\rm dip} &=& \frac{\int_{\rm{CMB}} (\bvec{B}_{1}^{0})^2 dS}{\sum_{l=1}^{13} \int_{\rm{CMB}} (\bvec{B}_l)^2 dS}, \mbox{and} \\
 \ell_{l} &=& \frac{\sum_{l} \int l(\bvec{u}_{l})^2 dV}{\int \bvec{u}^2 dV},
 \end{eqnarray}
-where, $\bvec{B}_{1}^{0}$ is the dipole component of the magnetic field, and $\bvec{B}_{l}$ and $\bvec{u}_{l}$ are the spherical harmonic degree $l$ component of the magneitc field and flow velocity, respectively.
+where, $\bvec{B}_{1}^{0}$ is the 
+{\color{red}axial}
+dipole component of the magnetic field, and $\bvec{B}_{l}$ and $\bvec{u}_{l}$ are the spherical harmonic degree $l$ component of the magneitc field and flow velocity, respectively.
 %
-The dipolarity decreases significantly in the reversal phase because axial dipole component largely decreases during the reversal. However, the local Rossby number has small difference between stable and reversal phase.
+The dipolarity decreases significantly in the reversal phase, because axial dipole component largely decreases during the reversal. However, the local Rossby number has small difference between stable and reversal phase.
 }
-%
-\begin{table}[h]
-\caption{Magnetic Reynolds number $Rm$, dipolarity $f_{dip}$, and local Rossby number $Ro_{\ell}$ in the spherical shell averaged over $96.0 t_{\eta} < t < 106.0 t_{\eta}$.}
+
+\begin{table}[t]
+\caption{Magnetic Reynolds number $Rm$, dipolarity $f_{\rm dip}$, 
+{\color{red} typical horizontal wave number for the convection $\ell_{l}$ }
+and local Rossby number $Ro_{\ell}$ in the spherical shell averaged over $96.0 t_{\eta} < t < 106.0 t_{\eta}$.}
 \label{table:average_dipolarity}
 \begin{tabular}{ccccc}
- & $Rm$ & $f_{dip}$ & 
+ & $Rm$ & $f_{\rm dip}$ & 
   ${\ell}_{l}$ & $Ro_{\ell}$ \\ \hline
 \mbox{Stable} & $344.4 \pm 130.5 $ &
                 $0.208 \pm 0.029$ &
@@ -49,7 +54,7 @@ The dipolarity decreases significantly in the reversal phase because axial dipol
 
 The result shows that there are periods during which the dipole field was stable and those during which 12 polarity reversals and 4 excursions occurred (see Fig.~\ref{fig:sph_shell_275_full}).
 In the present study, we choose 11 %8
-periods shown by double headed arrows in Fig.~\ref{fig:sph_shell_275_full} including these polarity reversals, and investigate energy transfer among the kinetic and magnetic energies for the equatorially symmetric and antisymmetric components. 
+periods shown by double-headed arrows in Fig.~\ref{fig:sph_shell_275_full} including these polarity reversals, and investigate energy transfer among the kinetic and magnetic energies for the equatorially symmetric and antisymmetric components. 
 We also carried out 7 simulations starting from snapshots in Period 1, 2 and 3. 
 These results were found to depart from the original result except for the case Retry 3-2, but these retried cases also include polarity reversals and excursions (see Fig.~\ref{fig:dipole_tilt_retries}). 
 We will discuss the reason why these retried cases give rise to different results in the discussion section.
@@ -174,7 +179,7 @@ Finally, the buoyancy inside the tangent cylinder drives upwelling flow and enha
 We also investigate the time evolution of the perturbation of work against the Lorentz force ({\it i.e.} energy transfer by the magnetic induction term) (see Fig.~\ref{fig:mag_energy_flux_evolution_retry1_1}).
 % As seen in the panel (d) to (f) of Fig.~\ref{fig:mag_energy_flux_evolution_retry1_1}, both of the the average and perturbation of the work against the Lorenz force by the equatorially symmetric flow is dominant for the both of the equatorially symmetric and antisymmetric component of the magnetic energies.
 {\color{teal}
-As seen in the panel (d) to (g) of Fig.~\ref{fig:mag_energy_flux_evolution_retry1_1}, both of the the average and perturbation of the work against the Lorenz force by $\bvec{u}^s$ is dominant to the magnetic energy for both $\bvec{B}^s$ and $\bvec{B}^a$.
+As seen in Fig.~\ref{fig:mag_energy_flux_evolution_retry1_1}d and g, both of the the average and perturbation of the work against the Lorenz force by $\bvec{u}^s$ is dominant to the magnetic energy for both $\bvec{B}^s$ and $\bvec{B}^a$.
 }
 % In addition, the time evolution of the perturbation of the work against Lorentz force for the equatorially symmetric and antisymmetric magnetic energies are similar to each other.
 {\color{teal}
@@ -182,12 +187,12 @@ In addition, the time evolution of the perturbation of the work against Lorentz 
 }
 % Consequently, we can only explain that the energy fluxes to the equatorially symmetric and antisymmetric magnetic energies decreases during the reversals.
 {\color{teal}
-Consequently, we can only explain that the energy fluxes to the magnetic energy for $\bvec{B}^s$ and $\bvec{B}^a$ decreases during the reversals.
+Consequently, we can only explain that the energy transfers to the magnetic energy for $\bvec{B}^s$ and $\bvec{B}^a$ decrease during the reversals.
 }
 
 \input{fig_evolution_ME_fluxes.tex}
 
-The present results of the behaviour of the kinetic energy and energy transfer suggest the process of the magnetic field generation during polarity reversals as follows.
+The present results of the behavior of the kinetic energy and energy transfer suggest the process of the magnetic field generation during polarity reversals as follows.
 At the beginning of a reversal process, the amplitude of the dipole magnetic field decreases with decreasing the energy transfer from $\bvec{u}^s$ by the Lorentz force. 
 When the kinetic energy for $\bvec{u}^a$ increases by the advection and buoyancy, the axial dipole magnetic field decreases and intense radial magnetic field is generated around the warm upward flow near the tangent cylinder in the either hemisphere. 
 The upward flow also spreads out of the tangent cylinder and reaches near the CMB in low latitudes. 
@@ -195,7 +200,7 @@ At the end of the reversal, the warm upward flow comes out of the tangent cylind
 The flow can intensify the convection columns which generate the magnetic field. 
 Consequently, the dipolar magnetic field with the opposite polarity increases in the outside of tangent cylinder with decreasing the equatorially antisymmetric flow and temperature.
 
-The intense equatorially antisymmetric zonal flow can generate intense equatorially symmetric zonal toroidal magnetic field with satisfying the thermal wind balance, and then columnar convective flow can generate the poloidal magnetic field with the polarity opposit to the original dipolar field.
+The intense equatorially antisymmetric zonal flow can generate intense equatorially symmetric zonal toroidal magnetic field with satisfying the thermal wind balance, and then columnar convective flow can generate the poloidal magnetic field with the polarity opposite to the original dipolar field.
 The poloidal magnetic field is likely to be induced by converging and upward flow motion along with the plumes from the bottom of the outer core.
 This poloidal magnetic field is not axisymmetric when the plume goes to the outside of the tangent cylinder. 
 Consequently, the generated field expands to global spherical shell (i.e. axisymmetric) to construct the reversed dipolar magnetic field.

@@ -15,11 +15,13 @@ We found, however, that polarity reversals occur in the same way, and that the s
 When we performed simulation under the same spherical harmonic transform algorithm and parallelization on the same computer system, we obtained identical solutions with a dipole reversal. In addition, the time average of the kinetic and magnetic energies in the all retried cases in the result section are up to 0.4 times of the standard deviation of the average kinetic and magnetic energies throughout the simulation. 
 %In addition, we continues the simulation to more than 20 times of the magnetic diffusion times (see Fig.~\ref{fig:sph_shell_275_full}), and there is no significant difference in the occurrence of the dipole reversals and averaged kinetic and magnetic energies.
 {\color{magenta}
-In addition, we continues the simulation to more than 20 times of the magnetic diffusion times from each retried cases (see Fig.~\ref{fig:sph_shell_275_full}), and there is no significant difference in the occurrence of the dipole reversals and averaged kinetic and magnetic energies.
+%In addition, we continued the simulation to more than 20 time of the magnetic diffusion times from each retried case (see Fig.~\ref{fig:sph_shell_275_full}), and there is no significant difference in the occurrence of the dipole reversals and averaged kinetic and magnetic energies.
+We further continued the numerical simulation up to more than 20 times of the magnetic diffusion time from each retried case (see Fig.~\ref{fig:sph_shell_275_full}).
+We found that there is no significant difference in the occurrence of the dipole reversals and averaged kinetic and magnetic energies.
 }
 % Hence, we consider that the present results are substantial and feasible and that the reversal does not initiated by the numerical errors.
 {\color{teal}
-Hence, we consider that the present results are robust and that the reversal does not initiated by the numerical errors.
+Hence, we consider that the present results are robust and that polarity reversals are not initiated by the numerical errors.
 }
 }
 
@@ -27,16 +29,17 @@ Hence, we consider that the present results are robust and that the reversal doe
 {\color{teal}
 The dimensionless numbers adopted in the present study are based on those used by Sreenivasan et al.\ (2014) who obtained Earth-like dipole reversals with the Rayleigh number, $Ra_f = \alpha g_o \beta_o D^2 / \Omega \nu = 2700$.
 }
-
-{\color{red} We also perform a dynamo simulations with two different flux Rayleigh numbers $Ra_{f} = 1500$ and 2700. The evolution of the dipole tilt at the outer boundary for these cases is shown in Fig.~\ref{Fig:more_cases}, and the $Rm$, $f_{dip}$, $\ell_{l}$, and $Ro_{\ell}$ in the stable and reversal periods are listed in Table \ref{table:average_dipolarity_2}.
+{\color{red} We also performed dynamo simulations with two different flux Rayleigh numbers $Ra_{f} = 1500$ and 2700. The evolution of the dipole tilt at the outer boundary for these cases is shown in Fig.~\ref{Fig:more_cases}, and the $Rm$, $f_{dip}$, $\ell_{l}$, and $Ro_{\ell}$ in the stable and reversal periods are listed in Table \ref{table:average_dipolarity_2}.
 }
-%
-\begin{table}[h]
-\caption{Magnetic Reynolds number $Rm$, dipolarity $f_{dip}$, and local Rossby number $Ro_{\ell}$ in the spherical shell.}
+
+\begin{table}[t]
+\caption{Magnetic Reynolds number $Rm$, dipolarity $f_{\rm dip}$, 
+{\color{blue} typical horizontal wave number for the convection $\ell_{l}$}
+and local Rossby number $Ro_{\ell}$ in the spherical shell.}
 \label{table:average_dipolarity_2}
 \renewcommand{\arraystretch}{1.3} % 行間を1.5倍に
 \begin{tabular}{cc|cccc}
-$Ra_f$ & & $Rm$ & $f_{dip}$ & 
+$Ra_f$ & & $Rm$ & $f_{\rm dip}$ & 
   ${\ell}_{l}$ & $Ro_{\ell}$ \\ \hline
 2700 & \mbox{Stable} & $426.4 \pm 168.7 $ &
                 $0.109 \pm 0.054$ &
@@ -56,12 +59,12 @@ $Ra_f$ & & $Rm$ & $f_{dip}$ &
                   \rule[0.5ex]{2em}{0.4pt} \\ \hline\end{tabular}
 \end{table}
 %
-As shown in Fig.~\ref{Fig:more_cases}, however, we obtained a solution of multipolar dominated dynamo for $Ra_f = 2700$
-{\color{teal}
-defined in (\ref{eq:dimensionless_numbers}).
-}
+As shown in Fig.~\ref{Fig:more_cases}, however, we obtained a solution of multipolar dominated dynamo for $Ra_f = 2700$.
+%{\color{teal}
+%defined in (\ref{eq:dimensionless_numbers}).
+%}
 %, although Sreenivasan et al.\ (2014) obtained Earth-like dipole reversals with the same Rayleigh number (it is noted that Sreennivasan et al.\ (2014) defined the Rayleigh number as $Ra_f = \alpha g_o \beta_o D^2 / 2\Omega \nu$).
-The difference is likely to originate from the different thermal boundary condition at the inner boundary. 
+The difference of the behavior of reversals between the simulations by the present study and that by Sreenivasan et al. (2014) with the same $Ra_{f}$ is likely to originate from the different thermal boundary condition at the inner boundary. 
 We fixed the heat flux at the inner boundary, while Sreenivasan et al.\ (2014) fixed the temperature at the inner boundary. 
 %The uniformly fixed temperature boundary condition forces the temperature to be equatorially symmetric at the inner boundary, although the temperature can be equatorially antisymmetric away from the inner boundary.
 {\color{teal}
@@ -75,9 +78,9 @@ The result suggests that the thermal boundary condition at the ICB does not have
 \input{fig_timevo_Raf.tex}
 
 Nishikawa and Kusano (2008) % \cite{Nishikawa:2008} 
-investigated energy transfers to $\bvec{B}^s$ and $\bvec{B}^a$ by $\bvec{u}^s$ and $\bvec{u}^a$ and the magnetic diffusion in the induction equation
+investigated energy transfers to $\bvec{B}^s$ and $\bvec{B}^a$ by $\bvec{u}^s$ and $\bvec{u}^a$ and the magnetic diffusion in the induction equation.
 {\color{teal}
-showed a process for the growth of the antisymmetric flow during polarity reversals, which differs from our model.
+They showed a process for the growth of the antisymmetric flow during polarity reversals, which differs from our model.
 Specifically, during the stable phase, only the energy of the equatorially antisymmetric magnetic field is converted into the equatorially antisymmetric flow. However, during the reversal phase, the energy of the equatorially symmetric magnetic field is also converted into antisymmetric flow. Consequently, the energy conversion to the antisymmetric flow increases compared to the stable phase.
 % For the stable phase, the energy of the antisymmetric magnetic field generated by the symmetric flow is converted to the antisymmetric flow, whereas flow energy is always transferred to the magnetic field regardless of the equatroial symmetry in our model.
 % In contrast, for the reversal phase, the symmetric magnetic field is converted to antisymmetric flow because the symmetric magnetic field generation rate by the symmetric flow is higher than during the stable phase. Consequently, the energy conversion to antisymmetric flow becomes higher than during the stable phase, which modifies the equatorial symmetry of the flow.
@@ -85,8 +88,8 @@ Specifically, during the stable phase, only the energy of the equatorially antis
 % They concluded that the magnetic induction by $\bvec{u}^a$ increases during polarity reversals. 
 It should be noted that Nishikawa and Kusano (2008) adopted compressbility of core fluid and that the magnetic boundary condition and dimensionless numbers are different from those in the present dynamo model.
 Especially, Nishikawa and Kusano (2008) adopted larger magnetic Prandtl numbers ($Pm = 10 \sim 15$). 
-The role of the Lorentz force increases with the magnetic Prandtl number $Pm$ in the dynamics of the fluid motion.
-The difference of the magnetic Prandtl number can change the most important term for the polarity reversal process. 
+The role of the Lorentz force increases with increase of the magnetic Prandtl number $Pm$ in the dynamics of the fluid motion.
+The difference in the magnetic Prandtl number can change the most important term for the polarity reversal process. 
 
 %The result in the present study is consistent with a process of polarity reversal proposed by Wicht and Olson (2004), %\cite{Wicht:2004} 
 %although it indicates that the strong hot plume is generated in either one hemisphere during polarity reversals (See Figure 3(d). 
@@ -109,7 +112,7 @@ This suggests that it would be difficult to investigate energy transfer in relat
 % However, it is still difficult to evaluate how much equatorially antisymmetric flow is required to initiate a reversal or an excursion quantitatively. 
 
 {\color{red}
-Sprain et al. (2019) proposed Quality of Paleomagnetic Modeling criteria, $Q_{\rm PM}$ to asses semblance of the spatial and temporal variations of the magentic field between solutions of numerical dynamo simulations and the geomagnetic field using the five parameters (inclination anomaly, virtual geomagnetic pole dispersion at the equator, latitudinal variation in virtual geomagnetic pole dispersion, normalized width of virtual dipole moment distribution, and dipole field reversals) of the paleomagenetic records. Sprain et al. (2019) set five criteria from 1 to 5 for $Q_{\rm PM}$ and investigate 46 dynamo models, but the maximum $Q_{\rm PM}$ was 3. Meduri et al. (2021) also investigated the reproducivity of the paleomagnetic data in the thermally and compositionally driven dynamo simulations with smaller Ekman number than the cases by Sprain et al. (2019) using the $Q_{\rm PM}$ index. Meduri et al. (2021) obtained more Earth-like behaviour ($Q_{\rm PM}$ = 4) in the chemically driven dynamo cases with lower Ekman number.
+Sprain et al. (2019) proposed Quality of Paleomagnetic Modeling criteria, $Q_{\rm PM}$ to asses semblance of the spatial and temporal variations of the magentic field between solutions of numerical dynamo simulations and the geomagnetic field using the five parameters (inclination anomaly, virtual geomagnetic pole dispersion at the equator, latitudinal variation in virtual geomagnetic pole dispersion, normalized width of virtual dipole moment distribution, and dipole field reversals) of the paleomagenetic records. Sprain et al. (2019) set five criteria from 1 to 5 for $Q_{\rm PM}$ and investigated 46 dynamo models, but the maximum $Q_{\rm PM}$ was 3. Meduri et al. (2021) also investigated the reproducivity of the paleomagnetic data in the thermally and compositionally driven dynamo simulations with Ekman number smaller than that by Sprain et al. (2019) using the $Q_{\rm PM}$ index. Meduri et al. (2021) obtained more Earth-like behavior ($Q_{\rm PM}$ = 4) in the chemically driven dynamo cases with lower Ekman number.
 }
 
 {\color{red}
@@ -122,12 +125,11 @@ We expect that our parameter regime is between Run C in Meduri et al. (2021) and
 %The comparison with the geomagnetic field variation like $Q_{\rm PM}$ will be the further investigation of the present results.
 }
 {\color{teal}
-A comparison of our results to the spatial and temporal variations of the geomagnetic field in terms of $Q_{\rm PM}$, for example, will be necessary in the future. 
-}
+A comparison of our results to the spatial and temporal variations of the geomagnetic field in terms of $Q_{\rm PM}$, for example, will be necessary in the future.}
 
-{\color{blue}
-{\color{teal}}
+%{\color{teal}}
 %The present simulation is still far from the actual parameters for the Earth's outer core even considering the turbulent diffusivity. 
+{\color{blue}
 The parameters adopted in the present simulation are still far from the actual ones for the Earth's outer core even considering the turbulent diffusivity. 
 In addition, the amplitude of the inertia in the outer core is expected to be $10^{-5}$ times smaller than that of the Coriolis force. 
 The forces contributing to the energy transfer correspond to the second order of force balance which is the rest of the Magnetic-Alchimedic-Coriolis (MAC) balance. 
